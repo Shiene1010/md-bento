@@ -57,6 +57,7 @@ contacts:
   threads: "https://www.threads.com/@8knockdowns"
   x: "https://x.com/shienePark"
   daangn_kids: "https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/"
+  daangn_freding: "https://daangn.com/kr/share/community/ref/invite-group/beyZP7qj2SA"
 
 # 히어로 하단 리스트용
 current_roles:
@@ -105,7 +106,7 @@ work_off_build:
     tags: ["ENGLISH", "SMALLTALK"]
     summary: "스몰톡 영어 연습"
     link_text: "Naver ↗"
-    link_url: "https://blog.naver.com/whatiwillbeaverse"
+    link_url: "https://daangn.com/kr/share/community/ref/invite-group/beyZP7qj2SA"
   - title: "Voyager 블로그"
     tags: ["BLOG", "WRITING"]
     summary: "개인 블로그 및 기록"
@@ -237,7 +238,7 @@ link_groups:
         nature: "Gaming"
         x: 565
         y: 415
-# News (GitHub 최근 활동 3건)
+# News (GitHub 최근 활동 3건, 매주 1회 갱신)
 news:
   - date: "2026.10"
     text: "md-bento 포트폴리오 공개 (제로빌드 md-only, Pages 배포)"
@@ -246,20 +247,20 @@ news:
   - date: "2026.10"
     text: "global-grid-2062 배포 (Tweego SugarCube2 CYOA 데모)"
 
-# Publications (최근 GitHub Pages 3건)
+# Publications (블로그 3종 최신글, 매주 1회 갱신)
 publications:
-  - title: "md-bento"
-    author: "Shiene1010"
-    link_url: "https://github.com/Shiene1010/md-bento"
-    demo_url: "https://shiene1010.github.io/md-bento/"
-  - title: "TRIP-HomeOS-MD"
-    author: "Shiene1010"
-    link_url: "https://github.com/Shiene1010/TRIP-HomeOS-MD"
-    demo_url: "https://shiene1010.github.io/TRIP-HomeOS-MD/"
-  - title: "global-grid-2062"
-    author: "Shiene1010"
-    link_url: "https://github.com/Shiene1010/global-grid-2062"
-    demo_url: "https://shiene1010.github.io/global-grid-2062/"
+  - title: "지킬테마 voyager 블로그 만들기"
+    author: "Voyager · 2026.10"
+    link_url: "https://shiene1010.github.io/voyager/antigravity/web/non-major-ai-dev/"
+    demo_url: "https://shiene1010.github.io/voyager/antigravity/web/non-major-ai-dev/"
+  - title: "맥미니 M1 로컬 웹코더 에이전트 이슈 리포트"
+    author: "Blogger · 2026.08"
+    link_url: "https://shiene1010.blogspot.com/2026/08/m1-mac-mini-local-mobile-web-coding.html"
+    demo_url: "https://shiene1010.blogspot.com/2026/08/m1-mac-mini-local-mobile-web-coding.html"
+  - title: "Naver Blog 최신글"
+    author: "Naver · 확인 필요"
+    link_url: "https://blog.naver.com/whatiwillbeaverse"
+    demo_url: "https://blog.naver.com/whatiwillbeaverse"
 
 closing_quote:
   quote: "I talk, Agents token — in Markdown."
