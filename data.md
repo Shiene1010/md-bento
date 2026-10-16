@@ -163,6 +163,6 @@ work_matrix:
     nature: "Audio"
 
 closing_quote:
-  quote: "Powered by Jekyll and Minimal Light theme."
-  source: "https://github.com/yaoyao-liu/minimal-light"
+  quote: "쓴 글이 곧 페이지가 된다 — data.md + style.md, zero-build."
+  source: "md-bento · OpenCode Muse Spark 1.3"
 ---
