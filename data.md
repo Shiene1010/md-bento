@@ -51,7 +51,7 @@ contacts:
   discord: "https://discord.gg/ef6YzwNA"
   steam: "https://steamcommunity.com/profiles/76561198355440490/"
   soundcloud: "https://soundcloud.com/whatwillmyversebe?ref=clipboard&p=i&c=1&si=F690524B20EF4A8EBC04F16BAAB5AFD9&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-  danggn_kids: "https://blog.naver.com/whatiwillbeaverse"
+  danggn_kids: "https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/"
   danggn_freding: "https://blog.naver.com/whatiwillbeaverse"
 
 # 히어로 하단 리스트용
@@ -170,7 +170,7 @@ work_matrix:
     nature: "Channel"
   - category: "Group"
     target: "아이읽영"
-    target_url: "https://blog.naver.com/whatiwillbeaverse"
+    target_url: "https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/"
     role_desc: "운영자"
     nature: "당근모임"
   - category: "Group"
