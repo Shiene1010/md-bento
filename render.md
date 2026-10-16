@@ -164,11 +164,11 @@
 <div class="foot-grid">
 <div>
 <p class="eyebrow">Contact</p>
-<p><a href="mailto:{{ contacts.email }}">{{ contacts.email }}</a></p>
+<p><a href="mailto:{{ contacts.email }}">{{ contacts.email }}</a><br><a href="mailto:{{ contacts.email_apple1 }}">{{ contacts.email_apple1 }}</a><br><a href="mailto:{{ contacts.email_apple2 }}">{{ contacts.email_apple2 }}</a></p>
 </div>
 <div>
 <p class="eyebrow">Elsewhere</p>
-<p><a href="{{ contacts.voyager }}">Voyager ↗</a> · <a href="{{ contacts.youtube }}">YouTube ↗</a> · <a href="{{ contacts.discord }}">Discord ↗</a> · <a href="{{ contacts.steam }}">Steam ↗</a></p>
+<p><a href="{{ contacts.github }}">GitHub ↗</a> · <a href="{{ contacts.blogger }}">Blogger ↗</a> · <a href="{{ contacts.naver_blog }}">Naver ↗</a><br><a href="{{ contacts.voyager }}">Voyager ↗</a> · <a href="{{ contacts.youtube }}">YouTube ↗</a> · <a href="{{ contacts.discord }}">Discord ↗</a> · <a href="{{ contacts.steam }}">Steam ↗</a></p>
 </div>
 <div>
 <p class="eyebrow">Colophon</p>
