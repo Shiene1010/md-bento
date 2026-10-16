@@ -155,7 +155,7 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .i-ring { transform-box: fill-box; transform-origin: center; animation: ring 2s ease-out infinite; }
 @keyframes ring { from { transform: scale(1); opacity: 0.8; } to { transform: scale(1.8); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .tok-flow, .tok, .bars rect, .curve-gold, .curve-moss, .i-ring, .ticker-track, .reveal { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; } }
-.hero img[alt="avatar"] { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 1px solid var(--rule); }
+.hero img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 1px solid var(--rule); }
 .work-card { gap: 0.5rem; }
 .work-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
 .work-detail { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; min-height: 1.2em; }
