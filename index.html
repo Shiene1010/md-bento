@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>md-bento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js"></script>
+<style>body{background:#10140F;color:#F3EEE3;margin:0}main{max-width:1240px;margin:0 auto;padding:4rem 6vw}</style>
+<style id="md-style"></style>
+</head>
+<body>
+<main id="content">Loading…</main>
+<script>
+// md-bento engine (fixed file, do not edit content here):
+// data.md = content source, render.md = layout template, style.md = css source.
+function parseFrontmatter(raw) {
+  var m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+  if (!m) return { meta: {}, body: raw };
+  var meta = {};
+  try { meta = jsyaml.load(m[1]) || {}; } catch (e) { console.error('YAML parse fail', e); }
+  return { meta: meta, body: m[2] || '' };
+}
+function resolvePath(path, ctx) {
+  var parts = path.trim().split('.');
+  var cur = ctx;
+  for (var i = 0; i < parts.length; i++) {
+    if (cur == null) return undefined;
+    cur = cur[parts[i]];
+  }
+  return cur;
+}
+function parseVarExpr(expr) {
+  var parts = expr.split('|').map(function (s) { return s.trim(); });
+  var path = parts[0];
+  var def;
+  for (var i = 1; i < parts.length; i++) {
+    var f = parts[i].match(/^default\(['"]([\s\S]*)['"]\)$/);
+    if (f) def = f[1];
+  }
+  return { path: path, def: def };
+}
+// Minimal template parser: {{ var }}, {% for x in list %}..{% endfor %}, {% if x %}..{% endif %}
+function parseTemplate(src) {
+  var pos = 0;
+  function parseUntil(stops) {
+    var nodes = [];
+    while (pos < src.length) {
+      var iVar = src.indexOf('{{', pos);
+      var iTag = src.indexOf('{%', pos);
+      var next = -1, isVar = false;
+      if (iVar !== -1 && (iTag === -1 || iVar < iTag)) { next = iVar; isVar = true; }
+      else if (iTag !== -1) { next = iTag; isVar = false; }
+      if (next === -1) { nodes.push({ t: 'text', v: src.slice(pos) }); pos = src.length; break; }
+      if (next > pos) nodes.push({ t: 'text', v: src.slice(pos, next) });
+      if (isVar) {
+        var end = src.indexOf('}}', next);
+        if (end === -1) { nodes.push({ t: 'text', v: src.slice(next) }); pos = src.length; break; }
+        nodes.push({ t: 'var', expr: src.slice(next + 2, end).trim() });
+        pos = end + 2;
+      } else {
+        var end2 = src.indexOf('%}', next);
+        if (end2 === -1) { nodes.push({ t: 'text', v: src.slice(next) }); pos = src.length; break; }
+        var tag = src.slice(next + 2, end2).trim();
+        pos = end2 + 2;
+        var mFor = tag.match(/^for\s+(\w+)\s+in\s+([\w.]+)$/);
+        var mIf = tag.match(/^if\s+([\w.]+)$/);
+        if ((tag === 'endfor' || tag === 'endif') && stops && stops.indexOf(tag) !== -1) return nodes;
+        if (mFor) {
+          var inner = parseUntil(['endfor']);
+          nodes.push({ t: 'for', item: mFor[1], list: mFor[2], body: inner });
+        } else if (mIf) {
+          var inner2 = parseUntil(['endif']);
+          nodes.push({ t: 'if', cond: mIf[1], body: inner2 });
+        } else {
+          nodes.push({ t: 'text', v: '{%' + tag + '%}' });
+        }
+      }
+    }
+    return nodes;
+  }
+  return parseUntil(null);
+}
+function renderNodes(nodes, ctx) {
+  var out = '';
+  for (var i = 0; i < nodes.length; i++) {
+    var n = nodes[i];
+    if (n.t === 'text') out += n.v;
+    else if (n.t === 'var') {
+      var p = parseVarExpr(n.expr);
+      var v = resolvePath(p.path, ctx);
+      if ((v === undefined || v === null || v === '') && p.def !== undefined) v = p.def;
+      out += (v === undefined || v === null) ? '' : String(v);
+    } else if (n.t === 'if') {
+      if (resolvePath(n.cond, ctx)) out += renderNodes(n.body, ctx);
+    } else if (n.t === 'for') {
+      var list = resolvePath(n.list, ctx);
+      if (Array.isArray(list)) {
+        for (var j = 0; j < list.length; j++) {
+          var child = Object.create(ctx);
+          child[n.item] = list[j];
+          out += renderNodes(n.body, child);
+        }
+      }
+    }
+  }
+  return out;
+}
+function extractCss(styleRaw) {
+  var out = [];
+  var re = /```css([\s\S]*?)```/g, m;
+  while ((m = re.exec(styleRaw))) out.push(m[1]);
+  return out.join('\n');
+}
+async function load() {
+  var el = document.getElementById('content');
+  try {
+    var req = await Promise.all([fetch('data.md'), fetch('render.md'), fetch('style.md')]);
+    for (var i = 0; i < req.length; i++) {
+      if (!req[i].ok) throw new Error(['data.md', 'render.md', 'style.md'][i] + ' load fail (' + req[i].status + ')');
+    }
+    var dataRaw = await req[0].text();
+    var tmplRaw = await req[1].text();
+    var styleRaw = await req[2].text();
+    var parsed = parseFrontmatter(dataRaw);
+    var css = extractCss(styleRaw);
+    if (css) document.getElementById('md-style').textContent = css;
+    var nodes = parseTemplate(tmplRaw.replace(/^<!--[\s\S]*?-->\r?\n?/, ''));
+    var md = renderNodes(nodes, parsed.meta);
+    if (parsed.body.trim()) md += '\n\n' + parsed.body;
+    if (parsed.meta.profile && parsed.meta.profile.name) document.title = parsed.meta.profile.name;
+    el.innerHTML = marked.parse(md);
+    // reveal on scroll (youngest.dev: IntersectionObserver threshold 0.15)
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    el.querySelectorAll('.reveal, .hero').forEach(function (n) { n.classList.add('reveal'); io.observe(n); });
+    setTimeout(function () { el.querySelectorAll('.reveal').forEach(function (n) { n.classList.add('visible'); }); }, 2500);
+  } catch (err) {
+    el.innerHTML = '<h2>오류</h2><p>' + String(err.message || err) + '</p>'
+      + '<p><small><code>python3 -m http.server 8080</code> 또는 Live Server로 열어주세요 (file:// fetch 불가).</small></p>';
+  }
+}
+load();
+</script>
+</body>
+</html>
