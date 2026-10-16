@@ -45,6 +45,7 @@ layout:
 ## 2. 타이포그래피
 
 - Display `Montserrat` 700/800 (제목·카드명·인용), Body `Inter` (본문 1rem·1.65), Label `IBM Plex Mono` (eyebrow·태그·그래프 라벨), 한글 `Pretendard Variable` (CDN, 라틴 폰트 미보유 글리프 자동 폴백)
+- 원형(youngest.dev)의 Fraunces 세리프 대신 Montserrat를 쓴 것은 의도적 차별화: 한글 병기 시 세리프보다 지오메트릭 산세리프의 일관성이 높다고 판단
 - 스케일: H1 `clamp(52px,10vw,148px)` / H2 `clamp(28px,4vw,44px)` / 인용 `clamp(24px,4vw,44px)`
 
 ## 3. 레이아웃
