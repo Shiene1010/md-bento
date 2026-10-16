@@ -74,7 +74,14 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .nav-inner { display: flex; justify-content: space-between; align-items: center; padding-top: 26px; padding-bottom: 26px; }
 .nav-links { display: flex; gap: 1.2rem; font-size: 0.9rem; }
 .nav a { text-decoration: none; }
-.hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; padding-top: 140px; padding-bottom: 80px; }
+.hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; padding-top: 140px; padding-bottom: 80px; position: relative; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; pointer-events: none; }
+.hero-bg svg { width: 100%; height: 100%; display: block; }
+.hero > *:not(.hero-bg) { position: relative; }
+.hero img[alt="avatar"] { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 1px solid var(--rule); }
+.split-row { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2.5rem; align-items: center; margin: 2rem 0; }
+.split-art { opacity: 0.9; }
+.split-art svg { width: 100%; height: auto; display: block; }
 .ticker { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); overflow: hidden; white-space: nowrap; }
 .ticker-track { display: inline-block; padding: 14px 0; animation: scroll-left 32s linear infinite; }
 .ticker-track span { margin-right: 0.8em; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; }
@@ -96,6 +103,8 @@ summary { cursor: pointer; }
 @media (max-width: 640px) {
   .band { padding: 88px 0; }
   .foot-grid { grid-template-columns: 1fr; }
+  .split-row { grid-template-columns: 1fr; }
+  .split-art { display: none; }
 }
 ```
 
