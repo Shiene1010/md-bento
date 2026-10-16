@@ -138,7 +138,7 @@ link_groups:
     hy: 215
     left: true
     links:
-      - target: "아이읽영"
+      - target: "아영읽"
         target_url: "https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/"
         role_desc: "운영자"
         nature: "당근모임"

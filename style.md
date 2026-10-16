@@ -154,7 +154,7 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 @keyframes curvex { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.6; } }
 .i-ring { transform-box: fill-box; transform-origin: center; animation: ring 2s ease-out infinite; }
 @keyframes ring { from { transform: scale(1); opacity: 0.8; } to { transform: scale(1.8); opacity: 0; } }
-@media (prefers-reduced-motion: reduce) { .tok-flow, .tok, .bars rect, .curve-gold, .curve-moss, .i-ring { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .tok-flow, .tok, .bars rect, .curve-gold, .curve-moss, .i-ring, .ticker-track, .reveal { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; } }
 .hero img[alt="avatar"] { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 1px solid var(--rule); }
 .work-card { gap: 0.5rem; }
 .work-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
@@ -213,6 +213,10 @@ summary { cursor: pointer; }
 .n-center-label { font-size: 13px; font-weight: 600; fill: var(--parchment); text-anchor: middle; }
 .graph a:hover .n-leaf { fill: var(--gold); }
 .graph a { cursor: pointer; }
+.graph-fallback { display: none; margin: 1rem 0; }
+.graph-fallback .fb-group { margin: 0.8rem 0; }
+.graph-fallback .fb-nodes { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.4rem; }
+.graph-fallback .fb-nodes a { border: 1px solid var(--rule); border-radius: 999px; padding: 0.5rem 1rem; font-size: 0.95rem; text-decoration: none; min-height: 24px; display: inline-flex; align-items: center; }
 .cluster { transition: opacity 0.25s ease; }
 .graph:has(.cluster:hover) .cluster:not(:hover) { opacity: 0.3; }
 .cluster:hover .e-leaf { stroke: var(--gold); opacity: 0.9; }
@@ -225,9 +229,12 @@ a:hover .n-leaf { transform: scale(1.6); }
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 @media (max-width: 640px) {
+  .nav-links { flex-wrap: wrap; gap: 0.6rem 0.9rem; justify-content: flex-end; font-size: 0.8rem; }
   .band { padding: 88px 0; }
   .view { padding: 56px 0; }
   .foot-grid { grid-template-columns: 1fr; }
   .work-scroll .bento-card { flex-basis: 220px; }
+  .graph { display: none; }
+  .graph-fallback { display: block; }
 }
 ```

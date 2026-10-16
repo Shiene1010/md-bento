@@ -128,6 +128,10 @@
 {% if g.left %}{% for row in g.links %}<a href="{{ row.target_url }}"><title>{{ row.target }} — {{ row.role_desc }} · {{ row.nature }}</title><circle cx="{{ row.x }}" cy="{{ row.y }}" r="4" class="n-leaf"/><text x="{{ row.x }}" y="{{ row.y }}" dx="-10" dy="4" text-anchor="end" class="n-label">{{ row.target }}</text></a>{% endfor %}{% endif %}{% if g.right %}{% for row in g.links %}<a href="{{ row.target_url }}"><title>{{ row.target }} — {{ row.role_desc }} · {{ row.nature }}</title><circle cx="{{ row.x }}" cy="{{ row.y }}" r="4" class="n-leaf"/><text x="{{ row.x }}" y="{{ row.y }}" dx="10" dy="4" text-anchor="start" class="n-label">{{ row.target }}</text></a>{% endfor %}{% endif %}
 </g>{% endfor %}
 </svg>
+<div class="graph-fallback">{% for g in link_groups %}
+<div class="fb-group"><span class="eyebrow">{{ g.name }}</span><div class="fb-nodes">{% for row in g.links %}<a href="{{ row.target_url }}">{{ row.target }}</a>{% endfor %}
+</div></div>{% endfor %}
+</div>
 
 </div>
 
