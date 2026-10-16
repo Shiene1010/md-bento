@@ -132,6 +132,26 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .hero-bg { position: absolute; inset: 0; pointer-events: none; }
 .hero-bg svg { width: 100%; height: 100%; display: block; }
 .hero > *:not(.hero-bg) { position: relative; }
+.tok-flow { animation: tokflow 1.2s linear infinite; }
+@keyframes tokflow { to { stroke-dashoffset: -16; } }
+.tok { transform-box: fill-box; transform-origin: center; animation: tokpulse 1.6s ease-in-out infinite; }
+.t2 { animation-delay: 0.3s; }
+.t3 { animation-delay: 0.6s; }
+.t4 { animation-delay: 0.9s; }
+@keyframes tokpulse { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+.bars rect { transform-box: fill-box; transform-origin: bottom; animation: barbreathe 2.8s ease-in-out infinite alternate; }
+.bars rect:nth-child(1) { animation-duration: 2.2s; }
+.bars rect:nth-child(2) { animation-duration: 2.6s; }
+.bars rect:nth-child(3) { animation-duration: 3.1s; }
+.bars rect:nth-child(4) { animation-duration: 2.4s; }
+.bars rect:nth-child(5) { animation-duration: 3.4s; }
+@keyframes barbreathe { from { transform: scaleY(0.7); } to { transform: scaleY(1); } }
+.curve-gold { animation: curvex 4s ease-in-out infinite alternate; }
+.curve-moss { animation: curvex 4s ease-in-out -2s infinite alternate; }
+@keyframes curvex { from { opacity: 0.35; } to { opacity: 0.55; } }
+.i-ring { transform-box: fill-box; transform-origin: center; animation: ring 2s ease-out infinite; }
+@keyframes ring { from { transform: scale(1); opacity: 0.8; } to { transform: scale(1.8); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .tok-flow, .tok, .bars rect, .curve-gold, .curve-moss, .i-ring { animation: none; } }
 .hero img[alt="avatar"] { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 1px solid var(--rule); }
 .work-card { gap: 0.5rem; }
 .work-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }

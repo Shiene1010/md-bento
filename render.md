@@ -18,25 +18,26 @@
 <line x1="0" y1="300" x2="1200" y2="300"/>
 <line x1="0" y1="400" x2="1200" y2="400"/>
 </g>
-<g fill="var(--parchment)" opacity="0.08">
+<g class="bars" fill="var(--parchment)" opacity="0.08">
 <rect x="700" y="340" width="36" height="40" rx="3"/>
 <rect x="780" y="310" width="36" height="70" rx="3"/>
 <rect x="860" y="325" width="36" height="55" rx="3"/>
 <rect x="940" y="285" width="36" height="95" rx="3"/>
 <rect x="1020" y="305" width="36" height="75" rx="3"/>
 </g>
-<path d="M0,330 C200,320 300,260 450,220 C600,180 750,190 900,120 L1200,80" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0.45"/>
-<path d="M0,360 C220,355 350,300 500,275 C700,245 850,250 1000,180 L1200,150" fill="none" stroke="var(--moss-light)" stroke-width="1.5" opacity="0.5"/>
-<path d="M110,250 C250,240 350,210 480,185" fill="none" stroke="var(--gold)" stroke-width="1" stroke-dasharray="2 6" opacity="0.6"/>
+<path class="curve-gold" d="M0,330 C200,320 300,260 450,220 C600,180 750,190 900,120 L1200,80" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0.45"/>
+<path class="curve-moss" d="M0,360 C220,355 350,300 500,275 C700,245 850,250 1000,180 L1200,150" fill="none" stroke="var(--moss-light)" stroke-width="1.5" opacity="0.5"/>
+<path class="tok-flow" d="M110,250 C250,240 350,210 480,185" fill="none" stroke="var(--gold)" stroke-width="1" stroke-dasharray="2 6" opacity="0.6"/>
 <g fill="none" stroke="var(--gold)" stroke-width="1.5">
 <circle cx="90" cy="250" r="10" opacity="0.8"/>
+<circle cx="90" cy="250" r="10" fill="none" stroke="var(--gold)" stroke-width="1.5" class="i-ring"/>
 </g>
 <text x="90" y="278" text-anchor="middle" font-family="monospace" font-size="12" fill="var(--muted)">I</text>
 <g fill="var(--gold)">
-<circle cx="180" cy="243" r="3" opacity="0.5"/>
-<circle cx="260" cy="231" r="3.5" opacity="0.6"/>
-<circle cx="345" cy="214" r="4" opacity="0.75"/>
-<circle cx="430" cy="196" r="4.5" opacity="0.9"/>
+<circle class="tok t1" cx="180" cy="243" r="3"/>
+<circle class="tok t2" cx="260" cy="231" r="3.5"/>
+<circle class="tok t3" cx="345" cy="214" r="4"/>
+<circle class="tok t4" cx="430" cy="196" r="4.5"/>
 </g>
 </svg>
 </div>
