@@ -144,76 +144,122 @@ publications:
     link_url: "https://github.com/Shiene1010/global-grid-2062"
     demo_url: "https://shiene1010.github.io/global-grid-2062/"
 
-# 03 — 링크 그래프 (그룹별 허브 + 노드)
+# 03 — 링크 그래프 (그룹별 허브 + 노드, 좌표 포함)
 link_groups:
   - name: "코드"
+    hx: 200
+    hy: 75
+    left: true
     links:
       - target: "GitHub"
         target_url: "https://github.com/Shiene1010"
         role_desc: "@Shiene1010"
         nature: "Repos"
+        x: 115
+        y: 50
   - name: "모임들"
+    hx: 200
+    hy: 215
+    left: true
     links:
       - target: "아이읽영"
         target_url: "https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/"
         role_desc: "운영자"
         nature: "당근모임"
+        x: 115
+        y: 180
       - target: "프레딩 소몰톡"
         target_url: "https://blog.naver.com/whatiwillbeaverse"
         role_desc: "참가자"
         nature: "당근모임"
+        x: 115
+        y: 250
   - name: "블로그들"
+    hx: 200
+    hy: 360
+    left: true
     links:
       - target: "Voyager"
         target_url: "https://shiene1010.github.io/voyager/"
         role_desc: "개인 블로그"
         nature: "Writing"
+        x: 115
+        y: 320
       - target: "Google Blogger"
         target_url: "https://shiene1010.blogspot.com/"
         role_desc: "개인 블로그"
         nature: "Blogspot"
+        x: 115
+        y: 365
       - target: "Naver Blog"
         target_url: "https://blog.naver.com/whatiwillbeaverse"
         role_desc: "개인 블로그"
         nature: "Naver"
+        x: 115
+        y: 410
   - name: "SNS들"
+    hx: 480
+    hy: 105
+    right: true
     links:
       - target: "Facebook"
         target_url: "https://www.facebook.com/headtometa"
         role_desc: "@headtometa"
         nature: "SNS"
+        x: 565
+        y: 55
       - target: "Instagram"
         target_url: "https://www.instagram.com/headtometa/"
         role_desc: "@headtometa"
         nature: "SNS"
+        x: 565
+        y: 100
       - target: "Threads"
         target_url: "https://www.threads.com/@8knockdowns"
         role_desc: "@8knockdowns"
         nature: "SNS"
+        x: 565
+        y: 150
       - target: "X"
         target_url: "https://x.com/shienePark"
         role_desc: "@shienePark"
         nature: "SNS"
+        x: 565
+        y: 195
   - name: "영상·오디오"
+    hx: 480
+    hy: 260
+    right: true
     links:
       - target: "YouTube"
         target_url: "https://www.youtube.com/@8Knockdowns"
         role_desc: "@8Knockdowns"
         nature: "Channel"
+        x: 565
+        y: 235
       - target: "SoundCloud"
         target_url: "https://soundcloud.com/whatwillmyversebe?ref=clipboard&p=i&c=1&si=F690524B20EF4A8EBC04F16BAAB5AFD9&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         role_desc: "오디오"
         nature: "Audio"
+        x: 565
+        y: 285
   - name: "커뮤니티·플레이"
+    hx: 480
+    hy: 390
+    right: true
     links:
       - target: "Discord"
         target_url: "https://discord.gg/ef6YzwNA"
         role_desc: "서버 초대"
         nature: "Chat"
+        x: 565
+        y: 365
       - target: "Steam"
         target_url: "https://steamcommunity.com/profiles/76561198355440490/"
         role_desc: "프로필"
         nature: "Gaming"
+        x: 565
+        y: 415
 
 closing_quote:
   quote: "쓴 글이 곧 페이지가 된다 — data.md + style.md, zero-build."

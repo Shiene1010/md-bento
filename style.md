@@ -135,23 +135,16 @@ summary { cursor: pointer; }
 .bento-title { font-family: 'Montserrat', 'Pretendard Variable', 'Pretendard', sans-serif; font-weight: 700; font-size: 1.1rem; }
 .bento-role { color: var(--muted); font-size: 0.88rem; }
 .bento-arrow { position: absolute; top: 1rem; right: 1.1rem; color: var(--gold); }
-.net { position: relative; margin: 1.5rem 0; padding-left: 28px; }
-.net::before {
-  content: ""; position: absolute; left: 10px; top: 14px; bottom: 14px; width: 2px;
-  background: linear-gradient(var(--gold), var(--moss-light), transparent);
-}
-.net-group { position: relative; padding: 0.7rem 0; }
-.net-hub { display: flex; align-items: center; gap: 0.6rem; }
-.net-dot {
-  position: absolute; left: -23px; width: 10px; height: 10px; border-radius: 50%;
-  background: var(--gold); box-shadow: 0 0 8px rgba(201, 162, 39, 0.6);
-}
-.net-nodes { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.55rem; }
-.net-node {
-  border: 1px solid var(--rule); border-radius: 999px; padding: 0.35rem 0.95rem;
-  font-size: 0.9rem; text-decoration: none; transition: border-color 0.25s ease;
-}
-.net-node:hover { border-color: var(--gold); }
+.graph { width: 100%; height: auto; display: block; margin: 1.5rem 0; }
+.e-hub { stroke: var(--gold); stroke-width: 1.5; opacity: 0.45; }
+.e-leaf { stroke: var(--moss-light); stroke-width: 1.5; opacity: 0.5; }
+.n-hub { fill: var(--gold); }
+.n-leaf { fill: var(--parchment-dim); }
+.n-center { fill: var(--gold); }
+.n-hub-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; fill: var(--gold); text-anchor: middle; text-transform: uppercase; }
+.n-label { font-size: 12.5px; fill: var(--parchment); }
+.n-center-label { font-size: 13px; font-weight: 600; fill: var(--parchment); text-anchor: middle; }
+.graph a:hover .n-leaf { fill: var(--gold); }
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 @media (max-width: 640px) {
