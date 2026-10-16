@@ -71,7 +71,9 @@
 <a class="work-link" href="https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/">아영읽 ↗</a>
 </div>
 {% for item in work_off_build %}
-<div class="bento-card work-card">
+<div class="bento-card work-card win-card">
+<div class="window-bar"><span class="dot gold"></span><span class="dot moss"></span><span class="dot muted"></span><span class="window-title">{{ item.title }} DETAILS</span></div>
+<hr class="window-rule">
 <span class="bento-title">{{ item.title }}</span>
 <span class="work-tags">{% for tag in item.tags %}<code>{{ tag }}</code> {% endfor %}</span>
 <span class="bento-role">{{ item.summary }}</span>
