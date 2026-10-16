@@ -99,7 +99,7 @@
 <div class="wrap">
 
 ## 02 — Origins
-> How a writer ended up shipping systems.
+> md로 말하고 에이전트와 함께 짓기까지.
 
 > *"{{ origins.quote }}"*
 
@@ -108,9 +108,9 @@
 {% endfor %}
 
 <details>
-<summary><b>더 보기: 새벽 1시 인프라와 로그 기록 원문</b></summary>
+<summary><b>더 보기: 이 페이지는 md 3개로 동작합니다</b></summary>
 
-클라우드 비용 절감과 자체 호스팅(Traefik + Docker) 전환 과정에서 마주친 엣지 케이스 아카이브. `data.md`의 `origins.paragraphs`에 추가하면 여기 리스트에 그대로 반영된다.
+`data.md`에 쓰면 `render.md` 템플릿과 `style.md` 스타일을 거쳐 `index.html` 엔진이 브라우저에서 바로 그립니다. 빌드 없음, 새로고침이면 반영됩니다.
 </details>
 
 </div>
