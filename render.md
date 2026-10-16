@@ -79,14 +79,6 @@
 </div>{% endfor %}
 </div>
 
-<div class="meet-section">
-<svg class="meet-section-bg" viewBox="0 0 240 220" aria-hidden="true">
-<path d="M40,200 L40,100 A80,80 0 0 1 200,100 L200,200 Z" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0.8"/>
-<path d="M70,200 L70,115 A50,50 0 0 1 170,115 L170,200" fill="none" stroke="var(--moss-light)" stroke-width="1.5" opacity="0.7"/>
-<line x1="24" y1="200" x2="216" y2="200" stroke="var(--rule)" stroke-width="1.5"/>
-<circle cx="120" cy="60" r="4" fill="var(--gold)"/>
-</svg>
-
 ### Off the Meet
 
 <div class="bento-grid work-scroll">{% for item in work_off_build %}
@@ -102,8 +94,6 @@
 </div>
 
 <p class="meet-more"><a class="work-link" href="https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/">아영읽 ↗</a></p>
-
-</div>
 
 </div>
 
