@@ -158,7 +158,7 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .hero img[alt="avatar"] { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 1px solid var(--rule); }
 .work-card { gap: 0.5rem; }
 .work-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
-.work-detail { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; }
+.work-detail { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; min-height: 1.2em; }
 .work-link {
   margin-top: auto; align-self: flex-end;
   display: inline-block; border: 1.5px solid var(--gold); color: var(--gold);
@@ -201,7 +201,7 @@ summary { cursor: pointer; }
 }
 .bento-card:hover { border-color: var(--gold); transform: translateY(-2px); }
 .bento-title { font-family: 'Montserrat', 'Pretendard Variable', 'Pretendard', sans-serif; font-weight: 700; font-size: 1.1rem; overflow-wrap: break-word; min-width: 0; }
-.bento-role { color: var(--muted); font-size: 0.88rem; }
+.bento-role { color: var(--muted); font-size: 0.88rem; min-height: 1.5em; }
 .graph { width: 100%; height: auto; display: block; margin: 1.5rem 0; }
 .e-hub { stroke: var(--gold); stroke-width: 1.5; opacity: 0.45; }
 .e-leaf { stroke: var(--moss-light); stroke-width: 1.5; opacity: 0.5; }

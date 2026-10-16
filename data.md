@@ -15,7 +15,7 @@ profile:
 hero:
   eyebrow: "Service Dev · Suwon, South Korea"
   title: "Shiene1010"
-  tagline: "OpenCode로 서비스를 개발하고, 당근모임에서 아이들 영어원서로 읽어줍니다."
+  tagline: "OpenCode로 서비스를 개발하고, 아이들 영어원서 읽어주기를 합니다."
   typed: "I talk, Agents token — in Markdown."
 
 ticker:
@@ -72,7 +72,7 @@ current_roles:
     org_url: "https://shiene1010.github.io/voyager/"
   - role: "youngest.dev 리버스 엔지니어링"
     org: "md-bento에 이식"
-    org_url: "https://shiene1010.github.io/md-bento/"
+    org_url: "https://youngest.dev/"
 
 # 01 — The Work (On the Build / Off the Meet)
 work_on_build:

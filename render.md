@@ -74,7 +74,7 @@
 <span class="bento-title">{{ item.title }}</span>
 <span class="work-tags">{% for tag in item.tags %}<code>{{ tag }}</code> {% endfor %}</span>
 <span class="bento-role">{{ item.summary }}</span>
-{% if item.metrics_or_detail %}<span class="work-detail">{{ item.metrics_or_detail }}</span>{% endif %}
+<span class="work-detail">{{ item.metrics_or_detail }}</span>
 <a class="work-link" href="{{ item.link_url }}">{{ item.link_text | default('Link ↗') }}</a>
 </div>{% endfor %}
 </div>
@@ -88,7 +88,7 @@
 <span class="bento-title">{{ item.title }}</span>
 <span class="work-tags">{% for tag in item.tags %}<code>{{ tag }}</code> {% endfor %}</span>
 <span class="bento-role">{{ item.summary }}</span>
-{% if item.metrics_or_detail %}<span class="work-detail">{{ item.metrics_or_detail }}</span>{% endif %}
+<span class="work-detail">{{ item.metrics_or_detail }}</span>
 <a class="work-link" href="{{ item.link_url }}">{{ item.link_text | default('Link ↗') }}</a>
 </div>{% endfor %}
 </div>
