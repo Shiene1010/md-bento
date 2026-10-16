@@ -124,9 +124,14 @@
 
 ## 03 — Where the Work Lives
 
-| 분류 | 대상 / 플랫폼 | 역할 및 성격 | 링크 |
-| :--- | :--- | :--- | :--- |{% for row in work_matrix %}
-| **{{ row.category }}** | [{{ row.target }}]({{ row.target_url }}) | {{ row.role_desc }} (`{{ row.nature }}`) | [↗]({{ row.target_url }}) |{% endfor %}
+<div class="bento-grid">{% for row in work_matrix %}
+<a class="bento-card" href="{{ row.target_url }}">
+<span class="eyebrow">{{ row.category }}</span>
+<span class="bento-title">{{ row.target }}</span>
+<span class="bento-role">{{ row.role_desc }} · {{ row.nature }}</span>
+<span class="bento-arrow">↗</span>
+</a>{% endfor %}
+</div>
 
 </div>
 

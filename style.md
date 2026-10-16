@@ -98,11 +98,24 @@ summary { cursor: pointer; }
 .quote blockquote { border: none; font-size: clamp(24px, 4vw, 44px); font-family: 'Montserrat', 'Pretendard Variable', 'Pretendard', sans-serif; font-weight: 600; }
 .footer { padding: 88px 0 60px 0; border-top: 1px solid var(--rule); }
 .foot-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 2rem; }
+.bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+.bento-card:first-child { grid-column: span 2; }
+.bento-card {
+  position: relative; display: flex; flex-direction: column; gap: 0.3rem;
+  border: 1px solid var(--rule); border-radius: 12px; padding: 1.2rem 1.2rem 1.1rem;
+  text-decoration: none; transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.bento-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.bento-title { font-family: 'Montserrat', 'Pretendard Variable', 'Pretendard', sans-serif; font-weight: 700; font-size: 1.1rem; }
+.bento-role { color: var(--muted); font-size: 0.88rem; }
+.bento-arrow { position: absolute; top: 1rem; right: 1.1rem; color: var(--gold); }
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 @media (max-width: 640px) {
   .band { padding: 88px 0; }
   .foot-grid { grid-template-columns: 1fr; }
+  .bento-grid { grid-template-columns: 1fr; }
+  .bento-card:first-child { grid-column: span 1; }
   .split-row { grid-template-columns: 1fr; }
   .split-art { display: none; }
 }
