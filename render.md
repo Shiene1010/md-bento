@@ -19,9 +19,11 @@
 <line x1="0" y1="400" x2="1200" y2="400"/>
 </g>
 <g class="bars">
-<rect x="760" y="250" width="40" height="130" rx="3" fill="var(--gold)" opacity="0.14"/>
-<rect x="860" y="240" width="40" height="140" rx="3" fill="var(--moss-light)" opacity="0.16"/>
-<rect x="960" y="255" width="40" height="125" rx="3" fill="var(--parchment-dim)" opacity="0.1"/>
+<rect x="720" y="240" width="36" height="140" rx="3" fill="var(--gold)" opacity="0.14"/>
+<rect x="800" y="260" width="36" height="120" rx="3" fill="var(--moss-light)" opacity="0.16"/>
+<rect x="880" y="280" width="36" height="100" rx="3" fill="var(--parchment-dim)" opacity="0.1"/>
+<rect x="960" y="250" width="36" height="130" rx="3" fill="var(--gold)" opacity="0.14"/>
+<rect x="1040" y="270" width="36" height="110" rx="3" fill="var(--moss-light)" opacity="0.16"/>
 </g>
 <path class="curve-gold" d="M0,330 C200,320 300,260 450,220 C600,180 750,190 900,120 L1200,80" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0.45"/>
 <path class="curve-moss" d="M0,360 C220,355 350,300 500,275 C700,245 850,250 1000,180 L1200,150" fill="none" stroke="var(--moss-light)" stroke-width="1.5" opacity="0.5"/>
