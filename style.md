@@ -96,9 +96,9 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .dot.muted { background: var(--muted); }
 .window-title { margin-left: 0.4rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
 .window-rule { border: none; border-top: 1px solid var(--rule); margin: 0.2rem 0 0.6rem; width: 100%; }
-.meet-art { position: relative; overflow: hidden; justify-content: flex-end; }
-.meet-bg { position: absolute; right: -30px; bottom: -10px; width: 78%; opacity: 0.3; pointer-events: none; }
-.meet-art .work-link { position: relative; }
+.meet-section { position: relative; padding: 1.5rem 0 0.5rem; }
+.meet-section-bg { position: absolute; top: 0; right: 0; height: 100%; opacity: 0.18; pointer-events: none; }
+.meet-section > *:not(.meet-section-bg) { position: relative; }
 .work-scroll {
   display: flex; gap: 1rem;
   overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.75rem;
