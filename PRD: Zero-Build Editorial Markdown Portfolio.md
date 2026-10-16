@@ -1,55 +1,39 @@
+PRD: Zero-Build Markdown Portfolio (md-bento) — 구현상세서
 
-PRD: Zero-Build Editorial Markdown Portfolio (md-bento)
-
+Live: https://shiene1010.github.io/md-bento/ · 캐치프레이즈: "I talk, Agents token — in Markdown."
 
 1. 개요 (Overview)
 
-• 목적: 복잡한 빌드 파이프라인(Next.js/Astro)이나 무거운 프레임워크 없이, 순수 마크다운 파일(data.md + 제로 빌드 뷰어)만으로 youngest.dev 스타일의 에디토리얼·벤토 포트폴리오를 브라우저에 실시간 렌더링합니다.
-• 핵심 철학: "작성한 원문(.md) 자체가 곧 완성된 웹페이지다." 파일만 수정하면 브라우저에서 즉시 반영됩니다.
-• 타겟 사용자: 개발, 프로덕트, 글쓰기를 겸업하며 유지보수 비용을 0으로 수렴시키고 싶은 1인 메이커.
+• 목적: 빌드 파이프라인 없이 `data.md` 하나 수정으로 갱신되는 1인 포트폴리오. 원형은 youngest.dev 리버스 엔지니어링 (根 파일: `youngest-dev.json`, 로컬 전용·배포 제외).
+• 핵심 철학: "I talk, Agents token — in Markdown." 사람이 md로 말하면 에이전트가 페이지로 짓는다.
+• 현실: 순수 md만으로 부족한 레이아웃·인터랙션은 `render.md`(구조 템플릿)+`style.md`(css 원본)가 담당. `index.html`은 고정 엔진으로 수정 금지.
 
-2. 시스템 아키텍처 (Architecture)
+2. 시스템 아키텍처 (As-Built)
 
-text
-[ data.md ] (YAML + Markdown Content)
-       │
-       ▼  (Client-side Fetch or Zero-Config CDN Viewer)
-[ index.html + Zero-Build Engine (예: Marked.js / Docsify / Github-style CSS) ]
-       │
-       ▼
-[ Browser Rendering (Editorial Typography & Matrix Table) ]
-Use code with caution.
-• 제로 빌드 전략: 별도의 npm run build나 서버사이드 렌더링(SSR) 없이, 가벼운 단일 HTML 러너가 마크다운 파일을 로드하여 파싱합니다.
-• 파일 구성:
-	• data.md: 사용자의 프로필, 이력, 에세이, 매트릭스 데이터가 담긴 원본.
-	• index.html: 마크다운을 읽어들여 style.css와 함께 브라우저에 그려주는 싱글 파일 엔진.
-	• style.css: 에디토리얼 그리드, 타이포그래피, 다크모드를 정의하는 순수 CSS.
+[data.md: YAML frontmatter] ─┐
+[render.md: Jinja 부분집합 템플릿] ─┼─▶ index.html 엔진 (fetch 3파일 → js-yaml 파싱 → 템플릿 렌더 → css 펜스 주입 → marked 파싱 → #content) ─▶ DOM
+[style.md: ```css 펜스 + 해설 산문] ─┘
 
-3. 기능 요구사항 (Functional Requirements)
+• CDN 핀: js-yaml@4.1.0, marked@15.0.12, Google Fonts (Montserrat+Inter+IBM Plex Mono), Pretendard Variable (jsdelivr).
+• 렌더 순서상 `data.md` 본문은 비어 있고(YAML만), 최종 마크다운은 `render.md`×데이터 결합으로 생성된다.
+• 템플릿 부분집합: `{{ a.b }}`, `| default('x')`, `{% for x in y.z %}`, `{% if x %}`. 중첩 for 가능, `else` 없음, 값 안의 `{{ }}`는 재해석 안 됨 (단일 패스).
+• marked 특성상 `<div>` 직후 빈 줄 필수, 카드 내부는 순수 HTML만 (위반 시 원문 노출·`<p>` 오감김).
 
+3. 데이터 스키마 (data.md)
 
-FR-01: 데이터 분리 및 동적 주입
+profile(신원·메일·avatar) / hero(eyebrow·title·tagline·typed) / ticker(6) / nav(6: Work·Origins·Network·News·Publications·Contact) / contacts(17종 링크 인벤토리) / current_roles(4) / work_on_build(3)·work_off_build(3, 카드 슬롯 고정) / origins(인용+4문단+details) / link_groups(6허브·14리프, 그래프 좌표 hx/hy/x/y + left/right 포함) / news(3, GitHub 활동 수동 반영) / publications(3, Pages 수동 반영) / closing_quote.
 
-• data.md의 YAML Frontmatter와 본문 섹션을 클라이언트 혹은 경량 스크립트가 파싱하여 DOM에 매핑한다.
-• data.md가 수정되면 새로고침만으로 전체 텍스트와 링크 테이블이 동기화된다.
+4. 섹션·네비 (페이지 순서)
 
-FR-02: 에디토리얼 레이아웃 렌더링
+hero(`#top`, 타이핑 캐치프레이즈+토큰 차트) → 01 The Work(`#build`, On 가로 snap 윈도우카드 3 + Off Meet 윈도우카드 3) → 02 Origins(`#origins`, band) → 03 Where the Network Works(`#partners`, SVG 노드-엣지 그래프, 클러스터 스포트라이트) → 04 News(`#news`) → 05 Publications(`#publications`) → 인용 → footer(`#contact`). 전 뷰 `.view` 88px 리듬, 앵커 `scroll-margin-top: 90px`.
 
-• 최대 너비 700px 중앙 정렬 레이아웃을 강제하여 매거진 가독성을 확보한다.
-• 01 — The Work 내 On the Build / Off the Build 구조를 뱃지(code span)와 함께 시각적으로 구분한다.
-• 03 — Where the Work Lives 영역을 경계선이 최소화된 매트릭스 테이블로 표현한다.
+5. 디자인 시스템
 
-FR-03: 인터랙티브 디테일 (<details>)
+• 토큰: ink #10140F / ink-2 #161C13 / parchment #F3EEE3 / gold #C9A227 / moss-light #7C8F7A / rule rgba / muted. 타이포 Montserrat 700/800 + Inter + IBM Plex Mono + Pretendard 폴백.
+• 상호작용은 CSS only: 타이핑·토큰 3궤도 동기 애니메이션·그래프 `:has` 스포트라이트·reveal(IO 0.15). `prefers-reduced-motion` 시 정지.
 
-• 긴 로그, 새벽 인프라 회고, 아키텍처 원문은 네이티브 <details> 태그를 활용해 접고 펼칠 수 있게 지원한다.
+6. 검증·배포·제약
 
-FR-04: 반응형 및 다크모드
-
-• 미디어쿼리(prefers-color-scheme)를 통해 라이트/다크모드를 자동 전환한다.
-• 모바일 환경(max-width: 640px)에서 폰트 크기와 테이블 패딩이 자연스럽게 축소된다.
-
-4. 비기능 요구사항 (Non-Functional Requirements)
-
-• 로딩 속도: First Contentful Paint(FCP) 0.5초 이내 (CDN 캐시 및 제로 JS 원칙).
-• 유지보수성: Git 저장소에 data.md만 푸시하면 끝나는 구조.
-• 이식성: GitHub Profile README, Obsidian, 웹 브라우저 뷰어 어디서나 동일한 가독성 유지.
+• 검증: js-yaml+marked 실파이프라인 렌더 후 태그 잔여·섹션·링크·div 균형 확인 (37항목, 로컬 `/tmp/mdbtest`, 저장소 미포함).
+• 배포: `main` 푸시 → GitHub Pages 자동 배포. `.nojekyll` 필수 (Jekyll의 md 가공 방지). `file://` 불가, http 서빙 필수.
+• 제약: News·Publications 자동화 없음 (수동). Publications 썸네일 미보유 (`image` 키 제거됨). `assets/img/favicon.png`은 원본 보관용 (실사용은 루트 `favicon.ico`).
