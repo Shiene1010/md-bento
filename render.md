@@ -48,21 +48,19 @@
 
 ### On the Build
 <div class="bento-grid work-scroll">
-<div class="bento-card work-art" aria-hidden="true">
-<svg viewBox="0 0 320 220">
-<rect x="8" y="8" width="304" height="204" rx="12" fill="none" stroke="var(--rule)" stroke-width="1.5"/>
-<circle cx="32" cy="34" r="5" fill="var(--gold)"/>
-<circle cx="52" cy="34" r="5" fill="var(--moss-light)"/>
-<circle cx="72" cy="34" r="5" fill="var(--muted)"/>
-<line x1="24" y1="56" x2="296" y2="56" stroke="var(--rule)" stroke-width="1"/>
-<g stroke="var(--parchment-dim)" stroke-width="6" stroke-linecap="round" opacity="0.55">
-<line x1="32" y1="84" x2="180" y2="84"/>
-<line x1="32" y1="108" x2="240" y2="108"/>
-<line x1="32" y1="132" x2="150" y2="132"/>
-<line x1="32" y1="156" x2="210" y2="156"/>
+<div class="bento-card window-card" aria-hidden="true">
+<div class="window-bar"><span class="dot gold"></span><span class="dot moss"></span><span class="dot muted"></span><span class="window-title">On the Build</span></div>
+<hr class="window-rule">
+<div class="window-body">
+<svg viewBox="0 0 280 110">
+<g stroke="var(--parchment-dim)" stroke-width="7" stroke-linecap="round" opacity="0.55">
+<line x1="8" y1="16" x2="180" y2="16"/>
+<line x1="8" y1="44" x2="250" y2="44"/>
+<line x1="8" y1="72" x2="150" y2="72"/>
+<line x1="8" y1="100" x2="210" y2="100"/>
 </g>
-<rect x="32" y="172" width="70" height="20" rx="10" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0.7"/>
 </svg>
+</div>
 <a class="work-link" href="https://github.com/Shiene1010">All Repos ↗</a>
 </div>
 {% for item in work_on_build %}
@@ -71,27 +69,28 @@
 <span class="work-tags">{% for tag in item.tags %}<code>{{ tag }}</code> {% endfor %}</span>
 <span class="bento-role">{{ item.summary }}</span>
 {% if item.metrics_or_detail %}<span class="work-detail">{{ item.metrics_or_detail }}</span>{% endif %}
-<a class="work-link" href="{{ item.link_url }}">{{ item.link_text | default('View Project') }}</a>
+<a class="work-link" href="{{ item.link_url }}">{{ item.link_text | default('Link ↗') }}</a>
 </div>{% endfor %}
 </div>
 
-### Off the Build
+### Off the Meet
 <div class="bento-grid work-scroll">
-<div class="bento-card work-art" aria-hidden="true">
-<svg viewBox="0 0 240 220">
+<div class="bento-card meet-art" aria-hidden="true">
+<svg class="meet-bg" viewBox="0 0 240 220">
 <path d="M40,200 L40,100 A80,80 0 0 1 200,100 L200,200 Z" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0.8"/>
 <path d="M70,200 L70,115 A50,50 0 0 1 170,115 L170,200" fill="none" stroke="var(--moss-light)" stroke-width="1.5" opacity="0.7"/>
 <line x1="24" y1="200" x2="216" y2="200" stroke="var(--rule)" stroke-width="1.5"/>
 <circle cx="120" cy="60" r="4" fill="var(--gold)"/>
 </svg>
-<a class="work-link" href="https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/">아이읽영 ↗</a>
+<a class="work-link" href="https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/">아영읽 ↗</a>
 </div>
 {% for item in work_off_build %}
 <div class="bento-card work-card">
 <span class="bento-title">{{ item.title }}</span>
 <span class="work-tags">{% for tag in item.tags %}<code>{{ tag }}</code> {% endfor %}</span>
 <span class="bento-role">{{ item.summary }}</span>
-<a class="work-link" href="{{ item.link_url }}">Link ↗</a>
+{% if item.metrics_or_detail %}<span class="work-detail">{{ item.metrics_or_detail }}</span>{% endif %}
+<a class="work-link" href="{{ item.link_url }}">{{ item.link_text | default('Link ↗') }}</a>
 </div>{% endfor %}
 </div>
 
