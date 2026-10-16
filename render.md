@@ -47,18 +47,15 @@
 > On the build, and off it.
 
 ### On the Build
-<div class="split-row">
-<div class="split-text">
-
-{% for item in work_on_build %}
-* **{{ item.title }}** — {% for tag in item.tags %}`{{ tag }}` {% endfor %}
-  * {{ item.summary }}
-  {% if item.metrics_or_detail %}* *Detail:* {{ item.metrics_or_detail }}{% endif %}
-  * [{{ item.link_text | default('View Project ↗') }}]({{ item.link_url }})
-{% endfor %}
-
-</div>
-<div class="split-art" aria-hidden="true">
+<div class="bento-grid">{% for item in work_on_build %}
+<div class="bento-card work-card">
+<span class="bento-title">{{ item.title }}</span>
+<span class="work-tags">{% for tag in item.tags %}<code>{{ tag }}</code> {% endfor %}</span>
+<span class="bento-role">{{ item.summary }}</span>
+{% if item.metrics_or_detail %}<span class="work-detail">{{ item.metrics_or_detail }}</span>{% endif %}
+<a class="work-link" href="{{ item.link_url }}">{{ item.link_text | default('View Project') }}</a>
+</div>{% endfor %}
+<div class="bento-card work-art" aria-hidden="true">
 <svg viewBox="0 0 320 220">
 <rect x="8" y="8" width="304" height="204" rx="12" fill="none" stroke="var(--rule)" stroke-width="1.5"/>
 <circle cx="32" cy="34" r="5" fill="var(--gold)"/>
@@ -77,17 +74,14 @@
 </div>
 
 ### Off the Build
-<div class="split-row">
-<div class="split-text">
-
-{% for item in work_off_build %}
-* **{{ item.title }}** — {% for tag in item.tags %}`{{ tag }}` {% endfor %}
-  * {{ item.summary }}
-  * [Link ↗]({{ item.link_url }})
-{% endfor %}
-
-</div>
-<div class="split-art" aria-hidden="true">
+<div class="bento-grid">{% for item in work_off_build %}
+<div class="bento-card work-card">
+<span class="bento-title">{{ item.title }}</span>
+<span class="work-tags">{% for tag in item.tags %}<code>{{ tag }}</code> {% endfor %}</span>
+<span class="bento-role">{{ item.summary }}</span>
+<a class="work-link" href="{{ item.link_url }}">Link ↗</a>
+</div>{% endfor %}
+<div class="bento-card work-art" aria-hidden="true">
 <svg viewBox="0 0 240 220">
 <path d="M40,200 L40,100 A80,80 0 0 1 200,100 L200,200 Z" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0.8"/>
 <path d="M70,200 L70,115 A50,50 0 0 1 170,115 L170,200" fill="none" stroke="var(--moss-light)" stroke-width="1.5" opacity="0.7"/>

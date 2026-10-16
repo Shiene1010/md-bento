@@ -79,9 +79,12 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .hero-bg svg { width: 100%; height: 100%; display: block; }
 .hero > *:not(.hero-bg) { position: relative; }
 .hero img[alt="avatar"] { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 1px solid var(--rule); }
-.split-row { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2.5rem; align-items: center; margin: 2rem 0; }
-.split-art { opacity: 0.9; }
-.split-art svg { width: 100%; height: auto; display: block; }
+.work-card { gap: 0.5rem; }
+.work-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.work-detail { color: var(--parchment-dim); font-size: 0.88rem; }
+.work-link { margin-top: auto; padding-top: 0.5rem; text-decoration: none; color: var(--gold); font-weight: 600; font-size: 0.9rem; }
+.work-art { align-items: center; justify-content: center; }
+.work-art svg { width: 100%; height: auto; max-height: 220px; }
 .ticker { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); overflow: hidden; white-space: nowrap; }
 .ticker-track { display: inline-block; padding: 14px 0; animation: scroll-left 32s linear infinite; }
 .ticker-track span { margin-right: 0.8em; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; }
@@ -116,8 +119,6 @@ summary { cursor: pointer; }
   .foot-grid { grid-template-columns: 1fr; }
   .bento-grid { grid-template-columns: 1fr; }
   .bento-card:first-child { grid-column: span 1; }
-  .split-row { grid-template-columns: 1fr; }
-  .split-art { display: none; }
 }
 ```
 
