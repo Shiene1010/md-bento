@@ -42,7 +42,6 @@ nav:
 contacts:
   email: "whatwillmyversebe@naver.com"
   email_apple1: "whatwillmyversebe@icloud.com"
-  email_apple2: "d3d3t3t3@icloud.com"
   github: "https://github.com/Shiene1010"
   blogger: "https://shiene1010.blogspot.com/"
   naver_blog: "https://blog.naver.com/whatiwillbeaverse"
@@ -114,32 +113,32 @@ origins:
     - "**프레딩 소몰톡 참가자**: 당근모임에서 스몰톡으로 영어를 씁니다."
     - "**youngest.dev 리버스 엔지니어링** 결과를 md-bento 제로빌드 구조에 이식 (현재!)"
 
-# News (참고 페이지 News 섹션 그대로)
+# News (GitHub 최근 활동 3건)
 news:
-  - date: "2026.02"
-    text: "minimal-light → Shiene1010 테마 완성!"
-  - date: "2026.02"
-    text: "GitHub SSH dual account 설정 완료"
-  - date: "2026.02"
-    text: "Antigravity 첫 웹 배포 성공"
+  - date: "2026.10"
+    text: "md-bento 포트폴리오 공개 (제로빌드 md-only, Pages 배포)"
+  - date: "2026.10"
+    text: "TRIP-HomeOS-MD 정리 (16개 문서 → 실행 엔진 분리)"
+  - date: "2026.10"
+    text: "global-grid-2062 배포 (Tweego SugarCube2 CYOA 데모)"
 
-# Publications (참고 페이지 Publications 섹션 그대로)
+# Publications (최근 GitHub Pages 3건)
 publications:
-  - title: "minimal-light Shiene1010 테마"
+  - title: "md-bento"
     author: "Shiene1010"
-    image: "./assets/img/minimal-light.png"
-    link_url: "https://shiene1010.github.io/minimal-light"
-    demo_url: "https://shiene1010.github.io/minimal-light"
-  - title: "English Pattern Blog"
+    image: ""
+    link_url: "https://github.com/Shiene1010/md-bento"
+    demo_url: "https://shiene1010.github.io/md-bento/"
+  - title: "TRIP-HomeOS-MD"
     author: "Shiene1010"
-    image: "./assets/img/englishPatternBlog.png"
-    link_url: "https://shiene1010.github.io/english-pattern-blog/"
-    demo_url: "https://shiene1010.github.io/english-pattern-blog/"
-  - title: "RelativeClauseRecognizer"
+    image: ""
+    link_url: "https://github.com/Shiene1010/TRIP-HomeOS-MD"
+    demo_url: "https://shiene1010.github.io/TRIP-HomeOS-MD/"
+  - title: "global-grid-2062"
     author: "Shiene1010"
-    image: "./assets/img/RelativeClauseRecognizer.png"
-    link_url: ""
-    demo_url: ""
+    image: ""
+    link_url: "https://github.com/Shiene1010/global-grid-2062"
+    demo_url: "https://shiene1010.github.io/global-grid-2062/"
 
 # 03 — 링크 매트릭스 (참고 페이지 소셜 링크)
 work_matrix:

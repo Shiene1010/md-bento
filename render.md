@@ -164,7 +164,7 @@
 <div class="foot-grid">
 <div>
 <p class="eyebrow">Contact</p>
-<p><a href="mailto:{{ contacts.email }}">{{ contacts.email }}</a><br><a href="mailto:{{ contacts.email_apple1 }}">{{ contacts.email_apple1 }}</a><br><a href="mailto:{{ contacts.email_apple2 }}">{{ contacts.email_apple2 }}</a></p>
+<p><a href="mailto:{{ contacts.email }}">{{ contacts.email }}</a><br><a href="mailto:{{ contacts.email_apple1 }}">{{ contacts.email_apple1 }}</a></p>
 </div>
 <div>
 <p class="eyebrow">Elsewhere</p>
