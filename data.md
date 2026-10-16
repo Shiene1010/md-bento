@@ -264,6 +264,6 @@ publications:
 
 
 closing_quote:
-  quote: "I write, Agents build — in Markdown."
+  quote: "I talk, Agents token — in Markdown."
   source: "md-bento · OpenCode Muse Spark 1.3"
 ---
