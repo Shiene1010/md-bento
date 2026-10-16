@@ -82,9 +82,21 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .work-card { gap: 0.5rem; }
 .work-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
 .work-detail { color: var(--parchment-dim); font-size: 0.88rem; }
-.work-link { margin-top: auto; padding-top: 0.5rem; text-decoration: none; color: var(--gold); font-weight: 600; font-size: 0.9rem; }
+.work-link {
+  margin-top: auto; padding-top: 0; align-self: flex-start;
+  display: inline-block; border: 1.5px solid var(--gold); color: var(--gold);
+  border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.88rem; font-weight: 600;
+  text-decoration: none; transition: background 0.25s ease;
+}
+.work-link:hover { background: rgba(201, 162, 39, 0.12); }
 .work-art { align-items: center; justify-content: center; }
-.work-art svg { width: 100%; height: auto; max-height: 220px; }
+.work-art svg { width: 100%; height: auto; max-height: 150px; }
+.work-scroll {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(280px, 320px);
+  overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.75rem;
+}
+.work-scroll .bento-card { scroll-snap-align: start; min-height: 300px; }
+.work-scroll .bento-card:first-child { grid-column: span 1; }
 .ticker { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); overflow: hidden; white-space: nowrap; }
 .ticker-track { display: inline-block; padding: 14px 0; animation: scroll-left 32s linear infinite; }
 .ticker-track span { margin-right: 0.8em; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; }
@@ -119,6 +131,7 @@ summary { cursor: pointer; }
   .foot-grid { grid-template-columns: 1fr; }
   .bento-grid { grid-template-columns: 1fr; }
   .bento-card:first-child { grid-column: span 1; }
+  .work-scroll { grid-template-columns: none; grid-auto-columns: minmax(260px, 300px); }
 }
 ```
 

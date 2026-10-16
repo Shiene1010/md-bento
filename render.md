@@ -47,7 +47,7 @@
 > On the build, and off it.
 
 ### On the Build
-<div class="bento-grid">{% for item in work_on_build %}
+<div class="bento-grid work-scroll">{% for item in work_on_build %}
 <div class="bento-card work-card">
 <span class="bento-title">{{ item.title }}</span>
 <span class="work-tags">{% for tag in item.tags %}<code>{{ tag }}</code> {% endfor %}</span>
@@ -70,11 +70,12 @@
 </g>
 <rect x="32" y="172" width="70" height="20" rx="10" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0.7"/>
 </svg>
+<a class="work-link" href="https://github.com/Shiene1010">All Repos ↗</a>
 </div>
 </div>
 
 ### Off the Build
-<div class="bento-grid">{% for item in work_off_build %}
+<div class="bento-grid work-scroll">{% for item in work_off_build %}
 <div class="bento-card work-card">
 <span class="bento-title">{{ item.title }}</span>
 <span class="work-tags">{% for tag in item.tags %}<code>{{ tag }}</code> {% endfor %}</span>
@@ -88,6 +89,7 @@
 <line x1="24" y1="200" x2="216" y2="200" stroke="var(--rule)" stroke-width="1.5"/>
 <circle cx="120" cy="60" r="4" fill="var(--gold)"/>
 </svg>
+<a class="work-link" href="https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/">아이읽영 ↗</a>
 </div>
 </div>
 
