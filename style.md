@@ -24,9 +24,56 @@ layout:
   section_pad_mobile: "88px"
 ---
 
-# Style — youngest.dev editorial dark
+# Design System — md-bento
 
-> 색/폰트/여백을 바꾸고 싶으면 아래 `css` 펜스만 수정. `index.html`은 손대지 않는다.
+> `index.html`은 손대지 않는다. 아래 css 펜스가 스타일 원본, 이 산문은 해설서다. 둘은 1:1로 유지한다.
+
+## 1. 색상
+
+| 토큰 | 값 | 용도 |
+| :--- | :--- | :--- |
+| `ink` | `#10140F` | 페이지 배경 |
+| `ink-2` | `#161C13` | 밴드(Origins) 배경 |
+| `parchment` | `#F3EEE3` | 본문 |
+| `parchment-dim` | `#DCD6C7` | 부본문·요약·코드라인 |
+| `gold` | `#C9A227` | 포인트: 라벨·인용선·티커점·링크·허브 |
+| `gold-dim` | `#8E7420` | 예비 (저채도 포인트) |
+| `moss` / `moss-light` | `#4B5D4E` / `#7C8F7A` | 그래프 리프 엣지·도트 |
+| `rule` | `rgba(243,238,227,.14)` | 경계선·카드 테두리 |
+| `muted` | `#9A9E92` | 보조 텍스트·뱃지·윈도우 타이틀 |
+
+## 2. 타이포그래피
+
+- Display `Montserrat` 700/800 (제목·카드명·인용), Body `Inter` (본문 1rem·1.65), Label `IBM Plex Mono` (eyebrow·태그·그래프 라벨), 한글 `Pretendard Variable` (CDN, 라틴 폰트 미보유 글리프 자동 폴백)
+- 스케일: H1 `clamp(52px,10vw,148px)` / H2 `clamp(28px,4vw,44px)` / 인용 `clamp(24px,4vw,44px)`
+
+## 3. 레이아웃
+
+- `.wrap` 최대 1240px 중앙, 좌우 6vw. 섹션 여백 140px (모바일 88px). Hero 100svh 하단 정렬.
+
+## 4. 컴포넌트
+
+| 클래스 | 역할 |
+| :--- | :--- |
+| `nav` (fixed·difference) | 상단 메뉴, 스크롤 반전 |
+| `hero` · `hero-bg` | 차트 라인 배경 + 아바타·타이틀 |
+| `ticker` (32s 무한) | 키워드 스트립 |
+| `work-scroll` (가로 snap) | On/Off 카드 행, 카드 260px 고정·동일 높이 |
+| `bento-card` · `win-card` | 카드 베이스 + 윈도우형(도트·타이틀·구분선) |
+| `work-link` (pill) | 노란 둥근 버튼, 카드 하단 우측 고정 |
+| `window-bar` · `dot` · `window-rule` | 윈도우 크롬 |
+| `meet-section` · `meet-section-bg` | 아치 배경 섹션 |
+| `graph` · `cluster` · `e-hub/e-leaf` · `n-hub/n-leaf/n-center` | 노드-엣지 그래프 + 스포트라이트 |
+| `band` | Origins band 배경 |
+| `quote` · `footer` · `foot-grid` | 인용·푸터 3열 |
+
+## 5. 모션
+
+- `reveal` (IO 0.15, .8s 상승), 카드 호버 (gold 테두리 + 2px 상승, .25s), 그래프 클러스터 스포트라이트 (`:has`)
+
+## 6. 동기화 규칙
+
+- frontmatter `tokens` ↔ `:root` 1:1. 새 클래스 추가 시 §4에 한 줄. 펜스 시작 문자열을 산문에 쓰지 않는다 (추출 오작동).
 
 ```css
 :root {
@@ -156,9 +203,3 @@ a:hover .n-leaf { transform: scale(1.6); }
   .work-scroll .bento-card { flex-basis: 220px; }
 }
 ```
-
-## 토큰 설명
-
-- `ink / ink-2`: 배경. `parchment`: 본문. `gold`: 포인트(eyebrow, 인용선, 티커 점).
-- `Montserrat`(제목 display) + `Inter`(본문) + `IBM Plex Mono`(라벨) + `Pretendard Variable`(한글, CDN). 한글은 라틴 폰트에 없는 글리프라 자동 폴백된다.
-- 섹션 여백: 데스크탑 `140px`, 모바일 `88px`. `max-width: 1240px`.
