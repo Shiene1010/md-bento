@@ -29,4 +29,5 @@ python3 -m http.server 8080
 - CDN 핀: `js-yaml@4.1.0`, `marked@15.0.12`, Google Fonts (Montserrat+Inter+IBM Plex Mono), Pretendard Variable (jsdelivr). `https://jsdelivr.net` 같은 플레이스홀더 금지.
 - `style.md` 산문 안에 ```` ```css ```` 문자열 금지 (엔진이 첫 css 펜스를 추출하므로 오추출됨).
 - `render.md` 작성 규칙 (marked 특성): `<div>` 직후는 빈 줄 필수 (없으면 내부 마크다운이 원문 노출). 테이블 행의 `{% for %}`/`{% endfor %}`는 행과 같은 줄에 붙임 (사이 빈 줄이 생기면 테이블 깨짐).
+- 벤토카드 템플릿(On/Off 공용): 도트+`TITLE DETAILS`+구분선 → 제목·태그·요약·조건부 디테일 → pill 버튼 하단우측 고정. 260px·min-h 260px. 카드 내부는 순수 HTML만.
 - 배포 필수: `.nojekyll` 유지 (Jekyll이 `.md`를 가공하는 것을 방지). `assets/img/*.png`는 레포에 없어 깨짐 — 추가 전까지 Publications 이미지 broken이 정상.
