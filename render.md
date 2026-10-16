@@ -4,10 +4,7 @@
 <nav class="nav">
 <div class="wrap nav-inner">
 <a class="brand" href="#top">{{ profile.name }}</a>
-<div class="nav-links">
-{% for item in nav %}
-<a href="{{ item.href }}">{{ item.label }}</a>
-{% endfor %}
+<div class="nav-links">{% for item in nav %}<a href="{{ item.href }}">{{ item.label }}</a>{% endfor %}
 </div>
 </div>
 </nav>
@@ -32,7 +29,7 @@
 # {{ hero.title }}
 
 <p class="tagline">{{ hero.tagline }}</p>
-<p class="badge-bar"><small>`{{ profile.role_title }}` · {{ profile.status_badge }}</small></p>
+<p class="badge-bar"><small><code>{{ profile.role_title }}</code> · {{ profile.status_badge }}</small></p>
 
 {% for item in current_roles %}
 * **{{ item.role }}** · [{{ item.org }}]({{ item.org_url }})
@@ -40,13 +37,7 @@
 </div>
 
 <div class="ticker" aria-hidden="true">
-<div class="ticker-track">
-{% for t in ticker %}
-<span>{{ t }}</span><span class="dot">·</span>
-{% endfor %}
-{% for t in ticker %}
-<span>{{ t }}</span><span class="dot">·</span>
-{% endfor %}
+<div class="ticker-track">{% for t in ticker %}<span>{{ t }}</span><span class="dot">·</span>{% endfor %}{% for t in ticker %}<span>{{ t }}</span><span class="dot">·</span>{% endfor %}
 </div>
 </div>
 

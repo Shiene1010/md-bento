@@ -7,24 +7,25 @@
 profile:
   name: "Shiene1010"
   slug: "shiene1010"
-  role_title: "iOS Learner · SwiftUI · Antigravity"
-  hook: "iOS 앱 개발자 | Antigravity 웹 실험 | 수원"
-  status_badge: "🌱 iOS 학습중 & 웹 실험중"
+  role_title: "Service Dev · OpenCode · Muse Spark 1.3"
+  hook: "OpenCode Muse Spark 1.3으로 서비스를 개발하는 사람"
+  status_badge: "🌱 Muse Spark로 서비스 개발중"
   copyright_year: "2026"
   location: "Suwon, South Korea"
   avatar: "./assets/img/avatar.png"
 
 hero:
-  eyebrow: "iOS Learner · Suwon, South Korea"
+  eyebrow: "Service Dev · Suwon, South Korea"
   title: "Shiene1010"
-  tagline: "iOS 개발을 공부하고, Antigravity로 웹 배포를 실험합니다."
+  tagline: "OpenCode로 서비스를 개발하고, 당근모임에서 아이들에게 영어원서를 읽어줍니다."
 
 ticker:
-  - "SwiftUI"
+  - "OpenCode"
+  - "Muse Spark 1.3"
+  - "Zero-Build"
+  - "Kids English"
+  - "Small Talk"
   - "GitHub Pages"
-  - "Jekyll"
-  - "Antigravity"
-  - "Git SSH"
 
 nav:
   - label: "About"
@@ -48,15 +49,15 @@ contacts:
 
 # 히어로 하단 리스트용
 current_roles:
-  - role: "iOS / SwiftUI"
-    org: "학습중"
-    org_url: "https://shiene1010.github.io/minimal-light/"
-  - role: "Blue Ribbon Toastmasters"
-    org: "회원 (영어 스피치)"
+  - role: "Service Dev"
+    org: "OpenCode · Muse Spark 1.3"
+    org_url: "https://github.com/Shiene1010/md-bento"
+  - role: "아이들 영어원서 읽어주기"
+    org: "운영자 (당근모임)"
     org_url: "https://shiene1010.github.io/voyager/"
-  - role: "Antigravity"
-    org: "웹 자동 배포 실험"
-    org_url: "https://shiene1010.github.io/english-pattern-blog/"
+  - role: "프레딩 소몰톡"
+    org: "참가자 (당근모임)"
+    org_url: "https://shiene1010.github.io/voyager/"
   - role: "minimal-light"
     org: "Jekyll 테마 커스터마이징"
     org_url: "https://shiene1010.github.io/minimal-light"
@@ -84,22 +85,26 @@ work_on_build:
     link_url: "https://shiene1010.github.io/vector-shredder"
 
 work_off_build:
+  - title: "아이들 영어원서 읽어주기"
+    tags: ["KIDS-ENGLISH", "ORGANIZER"]
+    summary: "당근모임 운영자로 아이들에게 영어원서 읽어주기"
+    link_url: "https://shiene1010.github.io/voyager/"
+  - title: "프레딩 소몰톡"
+    tags: ["ENGLISH", "SMALLTALK"]
+    summary: "당근모임 참가자로 스몰톡 영어 연습"
+    link_url: "https://shiene1010.github.io/voyager/"
   - title: "Voyager 블로그"
     tags: ["BLOG", "WRITING"]
     summary: "개인 블로그 및 기록"
     link_url: "https://shiene1010.github.io/voyager/"
-  - title: "Toastmasters 스피치"
-    tags: ["ENGLISH", "SPEECH"]
-    summary: "Blue Ribbon Toastmasters 영어 스피치 연습"
-    link_url: "https://shiene1010.github.io/voyager/"
 
 # 02 — About Me
 origins:
-  quote: "iOS 개발을 공부하고 있는 Shiene1010입니다."
+  quote: "OpenCode로 서비스를 만들고, 아이들에게 영어원서를 읽어주는 Shiene1010입니다."
   paragraphs:
-    - "**iOS/SwiftUI** 앱 개발 학습중"
-    - "**Blue Ribbon Toastmasters** 회원 (영어 스피치 연습)"
-    - "**Antigravity**로 웹사이트 자동 배포 실험"
+    - "**OpenCode Muse Spark 1.3**으로 서비스를 직접 만들고 배포합니다."
+    - "**당근모임 운영자**: 아이들에게 영어원서를 읽어줍니다."
+    - "**프레딩 소몰톡 참가자**: 당근모임에서 스몰톡으로 영어를 씁니다."
     - "**minimal-light** Jekyll 테마 커스터마이징 (현재!)"
 
 # News (참고 페이지 News 섹션 그대로)
