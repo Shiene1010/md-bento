@@ -47,24 +47,10 @@
 > On the build, and off it.
 
 ### On the Build
-<div class="bento-grid work-scroll">
-<div class="bento-card window-card" aria-hidden="true">
-<div class="window-bar"><span class="dot gold"></span><span class="dot moss"></span><span class="dot muted"></span><span class="window-title">On the Build</span></div>
+<div class="bento-grid work-scroll">{% for item in work_on_build %}
+<div class="bento-card work-card win-card">
+<div class="window-bar"><span class="dot gold"></span><span class="dot moss"></span><span class="dot muted"></span><span class="window-title">{{ item.title }} DETAILS</span></div>
 <hr class="window-rule">
-<div class="window-body">
-<svg viewBox="0 0 280 110">
-<g stroke="var(--parchment-dim)" stroke-width="7" stroke-linecap="round" opacity="0.55">
-<line x1="8" y1="16" x2="180" y2="16"/>
-<line x1="8" y1="44" x2="250" y2="44"/>
-<line x1="8" y1="72" x2="150" y2="72"/>
-<line x1="8" y1="100" x2="210" y2="100"/>
-</g>
-</svg>
-</div>
-<a class="work-link" href="https://github.com/Shiene1010">All Repos ↗</a>
-</div>
-{% for item in work_on_build %}
-<div class="bento-card work-card">
 <span class="bento-title">{{ item.title }}</span>
 <span class="work-tags">{% for tag in item.tags %}<code>{{ tag }}</code> {% endfor %}</span>
 <span class="bento-role">{{ item.summary }}</span>

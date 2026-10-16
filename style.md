@@ -89,8 +89,6 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
   text-decoration: none; transition: background 0.25s ease;
 }
 .work-link:hover { background: rgba(201, 162, 39, 0.12); }
-.work-art { align-items: center; justify-content: center; }
-.work-art svg { width: 100%; height: auto; max-height: 150px; }
 .window-bar { display: flex; align-items: center; gap: 0.45rem; }
 .window-bar .dot { width: 10px; height: 10px; border-radius: 50%; }
 .dot.gold { background: var(--gold); }
@@ -98,8 +96,6 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .dot.muted { background: var(--muted); }
 .window-title { margin-left: 0.4rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
 .window-rule { border: none; border-top: 1px solid var(--rule); margin: 0.2rem 0 0.6rem; width: 100%; }
-.window-body { flex: 1; display: flex; align-items: center; }
-.window-body svg { width: 100%; height: auto; }
 .meet-art { position: relative; overflow: hidden; justify-content: flex-end; }
 .meet-bg { position: absolute; right: -30px; bottom: -10px; width: 78%; opacity: 0.3; pointer-events: none; }
 .meet-art .work-link { position: relative; }
