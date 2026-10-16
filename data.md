@@ -51,7 +51,7 @@ contacts:
   youtube: "https://www.youtube.com/@8Knockdowns"
   discord: "https://discord.gg/ef6YzwNA"
   steam: "https://steamcommunity.com/profiles/76561198355440490/"
-  soundcloud: "https://soundcloud.com/whatwillmyversebe?ref=clipboard&p=i&c=1&si=F690524B20EF4A8EBC04F16BAAB5AFD9&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+  soundcloud: "https://soundcloud.com/whatwillmyversebe"
   facebook: "https://www.facebook.com/headtometa"
   instagram: "https://www.instagram.com/headtometa/"
   threads: "https://www.threads.com/@8knockdowns"
@@ -98,16 +98,18 @@ work_on_build:
 work_off_build:
   - title: "아영읽"
     tags: ["KIDS-ENGLISH", "ORGANIZER"]
-    summary: "아이들영어원서 읽어주기"
+    summary: "아이들 영어원서 읽어주기"
     link_text: "아영읽 ↗"
     link_url: "https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/"
   - title: "프레딩 소몰톡"
     tags: ["ENGLISH", "SMALLTALK"]
     summary: "스몰톡 영어 연습"
-    link_url: "https://shiene1010.github.io/voyager/"
+    link_text: "Naver ↗"
+    link_url: "https://blog.naver.com/whatiwillbeaverse"
   - title: "Voyager 블로그"
     tags: ["BLOG", "WRITING"]
     summary: "개인 블로그 및 기록"
+    link_text: "Blog ↗"
     link_url: "https://shiene1010.github.io/voyager/"
 
 # 02 — About Me
@@ -213,7 +215,7 @@ link_groups:
         x: 565
         y: 235
       - target: "SoundCloud"
-        target_url: "https://soundcloud.com/whatwillmyversebe?ref=clipboard&p=i&c=1&si=F690524B20EF4A8EBC04F16BAAB5AFD9&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        target_url: "https://soundcloud.com/whatwillmyversebe"
         role_desc: "오디오"
         nature: "Audio"
         x: 565

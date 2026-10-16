@@ -23,7 +23,7 @@ python3 -m http.server 8080
 - 수정 후 `render.md` 태그 균형 확인: `{% for %}`/`endfor`, `{% if %}`/`endif`
 
 ## 4. Project-specific rules
-- stack: 제로빌드 정적 사이트. 빌드·번들러·테스트러너 없음. `index.html`은 고정 엔진이므로 내용 수정 금지.
+- stack: 제로빌드 정적 사이트. 빌드·번들러·테스트러너 없음. `index.html` 엔진 스크립트는 수정 금지, head 메타(title·SEO·favicon)는 허용.
 - 콘텐츠는 `data.md` (YAML frontmatter, Shiene1010 실데이터) / 레이아웃은 `render.md` / 스타일은 `style.md`의 css 펜스만 수정.
 - 템플릿 부분집합만 지원: `{{ a.b }}`, `| default('x')`, `{% for x in y.z %}`, `{% if x %}`. 중첩 for 가능, `else` 없음. 값 안의 `{{ }}`는 재해석 안 됨 (단일 패스).
 - CDN 핀: `js-yaml@4.1.0`, `marked@15.0.12`, Google Fonts (Montserrat+Inter+IBM Plex Mono), Pretendard Variable (jsdelivr). `https://jsdelivr.net` 같은 플레이스홀더 금지.

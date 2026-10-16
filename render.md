@@ -42,7 +42,7 @@
 </svg>
 </div>
 
-{% if profile.avatar %}![avatar]({{ profile.avatar }}){% endif %}
+{% if profile.avatar %}![Shiene1010 프로필 사진]({{ profile.avatar }}){% endif %}
 <p class="eyebrow">{{ hero.eyebrow }}</p>
 
 # {{ hero.title }}
@@ -120,7 +120,7 @@
 
 ## 03 — Where the Network Works
 
-<svg class="graph" viewBox="0 0 680 450" role="img" aria-label="link graph">
+<svg class="graph" viewBox="0 0 680 450" role="img" aria-label="링크 그래프">
 <a href="#top"><circle cx="340" cy="228" r="8" class="n-center"/><text x="340" y="228" dy="26" class="n-center-label">Shiene1010</text></a>
 {% for g in link_groups %}<g class="cluster">
 <line x1="340" y1="228" x2="{{ g.hx }}" y2="{{ g.hy }}" class="e-hub"/>{% for row in g.links %}<line x1="{{ g.hx }}" y1="{{ g.hy }}" x2="{{ row.x }}" y2="{{ row.y }}" class="e-leaf"/>{% endfor %}
@@ -149,12 +149,16 @@
 
 ## 05 — Publications
 
-{% for pub in publications %}
-* **{{ pub.title }}** — {{ pub.author }}
-  {% if pub.image %}* ![{{ pub.title }}]({{ pub.image }}){% endif %}
-  {% if pub.link_url %}* [Link]({{ pub.link_url }}){% endif %}
-  {% if pub.demo_url %}* [Live Demo]({{ pub.demo_url }}){% endif %}
-{% endfor %}
+<div class="bento-grid work-scroll">{% for pub in publications %}
+<div class="bento-card work-card win-card">
+<div class="window-bar"><span class="dot gold"></span><span class="dot moss"></span><span class="dot muted"></span><span class="window-title">{{ pub.title }} PAGES</span></div>
+<hr class="window-rule">
+<span class="bento-title">{{ pub.title }}</span>
+<span class="bento-role">{{ pub.author }}</span>
+<span class="work-detail"></span>
+{% if pub.demo_url %}<a class="work-link" href="{{ pub.demo_url }}">Live Demo ↗</a>{% endif %}
+</div>{% endfor %}
+</div>
 
 </div>
 

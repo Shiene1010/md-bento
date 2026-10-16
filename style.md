@@ -212,6 +212,7 @@ summary { cursor: pointer; }
 .n-label { font-size: 12.5px; fill: var(--parchment); }
 .n-center-label { font-size: 13px; font-weight: 600; fill: var(--parchment); text-anchor: middle; }
 .graph a:hover .n-leaf { fill: var(--gold); }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .graph a { cursor: pointer; }
 .graph-fallback { display: none; margin: 1rem 0; }
 .graph-fallback .fb-group { margin: 0.8rem 0; }
