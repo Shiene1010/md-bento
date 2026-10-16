@@ -1,17 +1,15 @@
 ---
 # ==========================================
 # [USER CONFIG] 이 파일만 수정하면 홈페이지 완성
-# 원본 참고: https://shiene1010.github.io/minimal-light/
-# 스타일 변경은 style.md, 레이아웃 변경은 render.md
+# 스타일 변경은 style.md, 레이아웃 변경은 render.md (규칙은 AGENTS.md)
+# 좌표(x/y/hx/hy)는 03 그래프 전용 (viewBox 680x450)
 # ==========================================
 profile:
   name: "Shiene1010"
-  slug: "shiene1010"
   role_title: "Service Dev · OpenCode · Muse Spark 1.3"
   hook: "OpenCode Muse Spark 1.3으로 서비스를 개발하는 사람"
   status_badge: "🌱 Muse Spark로 서비스 개발중"
   copyright_year: "2026"
-  location: "Suwon, South Korea"
   avatar: "./assets/img/avatar.png"
 
 hero:
@@ -41,6 +39,7 @@ nav:
   - label: "Contact"
     href: "#contact"
 
+# 전체 링크 인벤토리 (푸터·매트릭스 원본. 엔진이 단일 패스라 값 복붙으로 공유)
 contacts:
   email: "whatwillmyversebe@naver.com"
   email_apple1: "whatwillmyversebe@icloud.com"
@@ -74,7 +73,7 @@ current_roles:
     org: "md-bento에 이식"
     org_url: "https://shiene1010.github.io/md-bento/"
 
-# 01 — Projects
+# 01 — The Work (On the Build / Off the Meet)
 work_on_build:
   - title: "chunk-soundpad-mvp"
     tags: ["WEB-AUDIO", "SPEECH", "VANILLA"]
@@ -248,20 +247,16 @@ news:
 publications:
   - title: "md-bento"
     author: "Shiene1010"
-    image: ""
     link_url: "https://github.com/Shiene1010/md-bento"
     demo_url: "https://shiene1010.github.io/md-bento/"
   - title: "TRIP-HomeOS-MD"
     author: "Shiene1010"
-    image: ""
     link_url: "https://github.com/Shiene1010/TRIP-HomeOS-MD"
     demo_url: "https://shiene1010.github.io/TRIP-HomeOS-MD/"
   - title: "global-grid-2062"
     author: "Shiene1010"
-    image: ""
     link_url: "https://github.com/Shiene1010/global-grid-2062"
     demo_url: "https://shiene1010.github.io/global-grid-2062/"
-
 
 closing_quote:
   quote: "I talk, Agents token — in Markdown."

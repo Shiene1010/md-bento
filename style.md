@@ -8,7 +8,9 @@ tokens:
   parchment: "#F3EEE3"
   parchment_dim: "#DCD6C7"
   gold: "#C9A227"
+  gold_dim: "#8E7420"
   moss: "#4B5D4E"
+  moss_light: "#7C8F7A"
   rule: "rgba(243, 238, 227, 0.14)"
   muted: "#9A9E92"
 fonts:
@@ -83,7 +85,7 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .work-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
 .work-detail { color: var(--parchment-dim); font-size: 0.88rem; }
 .work-link {
-  margin-top: auto; padding-top: 0; align-self: flex-end;
+  margin-top: auto; align-self: flex-end;
   display: inline-block; border: 1.5px solid var(--gold); color: var(--gold);
   border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.88rem; font-weight: 600;
   text-decoration: none; transition: background 0.25s ease;
@@ -112,16 +114,12 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .band { background: var(--ink-2); padding: 140px 0; margin-top: 88px; }
 blockquote { border-left: 2px solid var(--gold); margin: 1.2rem 0; padding-left: 1rem; color: var(--parchment-dim); font-style: italic; }
 code { font-family: 'IBM Plex Mono', monospace; font-size: 0.78em; background: rgba(243,238,227,0.08); padding: 2px 6px; border-radius: 4px; }
-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.92rem; }
-th, td { padding: 0.7rem 0.5rem; text-align: left; border-bottom: 1px solid var(--rule); }
 details { border: 1px solid var(--rule); border-radius: 8px; padding: 0.9rem 1rem; margin: 1rem 0; }
 summary { cursor: pointer; }
 .quote { text-align: center; padding: 120px 0 40px 0; }
 .quote blockquote { border: none; font-size: clamp(24px, 4vw, 44px); font-family: 'Montserrat', 'Pretendard Variable', 'Pretendard', sans-serif; font-weight: 600; }
 .footer { padding: 88px 0 60px 0; border-top: 1px solid var(--rule); }
 .foot-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 2rem; }
-.bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
-.bento-card:first-child { grid-column: span 2; }
 .bento-card {
   position: relative; display: flex; flex-direction: column; gap: 0.3rem;
   border: 1px solid var(--rule); border-radius: 12px; padding: 1rem 1rem 0.9rem;
@@ -130,7 +128,6 @@ summary { cursor: pointer; }
 .bento-card:hover { border-color: var(--gold); transform: translateY(-2px); }
 .bento-title { font-family: 'Montserrat', 'Pretendard Variable', 'Pretendard', sans-serif; font-weight: 700; font-size: 1.1rem; overflow-wrap: break-word; min-width: 0; }
 .bento-role { color: var(--muted); font-size: 0.88rem; }
-.bento-arrow { position: absolute; top: 1rem; right: 1.1rem; color: var(--gold); }
 .graph { width: 100%; height: auto; display: block; margin: 1.5rem 0; }
 .e-hub { stroke: var(--gold); stroke-width: 1.5; opacity: 0.45; }
 .e-leaf { stroke: var(--moss-light); stroke-width: 1.5; opacity: 0.5; }
@@ -156,9 +153,7 @@ a:hover .n-leaf { transform: scale(1.6); }
 @media (max-width: 640px) {
   .band { padding: 88px 0; }
   .foot-grid { grid-template-columns: 1fr; }
-  .bento-grid { grid-template-columns: 1fr; }
-  .bento-card:first-child { grid-column: span 1; }
-  .work-scroll .bento-card { flex-basis: 260px; }
+  .work-scroll .bento-card { flex-basis: 220px; }
 }
 ```
 

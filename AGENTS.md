@@ -25,7 +25,7 @@ python3 -m http.server 8080
 ## 4. Project-specific rules
 - stack: 제로빌드 정적 사이트. 빌드·번들러·테스트러너 없음. `index.html`은 고정 엔진이므로 내용 수정 금지.
 - 콘텐츠는 `data.md` (YAML frontmatter, Shiene1010 실데이터) / 레이아웃은 `render.md` / 스타일은 `style.md`의 css 펜스만 수정.
-- 템플릿 부분집합만 지원: `{{ a.b }}`, `| default('x')`, `{% for x in y.z %}`, `{% if x %}`. 중첩 for 가능, `else` 없음.
+- 템플릿 부분집합만 지원: `{{ a.b }}`, `| default('x')`, `{% for x in y.z %}`, `{% if x %}`. 중첩 for 가능, `else` 없음. 값 안의 `{{ }}`는 재해석 안 됨 (단일 패스).
 - CDN 핀: `js-yaml@4.1.0`, `marked@15.0.12`, Google Fonts (Montserrat+Inter+IBM Plex Mono), Pretendard Variable (jsdelivr). `https://jsdelivr.net` 같은 플레이스홀더 금지.
 - `style.md` 산문 안에 ```` ```css ```` 문자열 금지 (엔진이 첫 css 펜스를 추출하므로 오추출됨).
 - `render.md` 작성 규칙 (marked 특성): `<div>` 직후는 빈 줄 필수 (없으면 내부 마크다운이 원문 노출). 테이블 행의 `{% for %}`/`{% endfor %}`는 행과 같은 줄에 붙임 (사이 빈 줄이 생기면 테이블 깨짐).
