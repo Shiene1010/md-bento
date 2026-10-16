@@ -58,9 +58,9 @@ current_roles:
   - role: "프레딩 소몰톡"
     org: "참가자 (당근모임)"
     org_url: "https://shiene1010.github.io/voyager/"
-  - role: "minimal-light"
-    org: "Jekyll 테마 커스터마이징"
-    org_url: "https://shiene1010.github.io/minimal-light"
+  - role: "youngest.dev 리버스 엔지니어링"
+    org: "md-bento에 이식"
+    org_url: "https://shiene1010.github.io/md-bento/"
 
 # 01 — Projects
 work_on_build:
@@ -105,7 +105,7 @@ origins:
     - "**OpenCode Muse Spark 1.3**으로 서비스를 직접 만들고 배포합니다."
     - "**당근모임 운영자**: 아이들에게 영어원서를 읽어줍니다."
     - "**프레딩 소몰톡 참가자**: 당근모임에서 스몰톡으로 영어를 씁니다."
-    - "**minimal-light** Jekyll 테마 커스터마이징 (현재!)"
+    - "**youngest.dev 리버스 엔지니어링** 결과를 md-bento 제로빌드 구조에 이식 (현재!)"
 
 # News (참고 페이지 News 섹션 그대로)
 news:
