@@ -83,7 +83,7 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .work-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
 .work-detail { color: var(--parchment-dim); font-size: 0.88rem; }
 .work-link {
-  margin-top: auto; padding-top: 0; align-self: flex-start;
+  margin-top: auto; padding-top: 0; align-self: flex-end;
   display: inline-block; border: 1.5px solid var(--gold); color: var(--gold);
   border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.88rem; font-weight: 600;
   text-decoration: none; transition: background 0.25s ease;
@@ -103,7 +103,7 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
   display: flex; gap: 1rem;
   overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.75rem;
 }
-.work-scroll .bento-card { flex: 0 0 300px; min-width: 0; scroll-snap-align: start; min-height: 300px; }
+.work-scroll .bento-card { flex: 0 0 260px; min-width: 0; scroll-snap-align: start; min-height: 260px; }
 .ticker { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); overflow: hidden; white-space: nowrap; }
 .ticker-track { display: inline-block; padding: 14px 0; animation: scroll-left 32s linear infinite; }
 .ticker-track span { margin-right: 0.8em; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; }
@@ -124,7 +124,7 @@ summary { cursor: pointer; }
 .bento-card:first-child { grid-column: span 2; }
 .bento-card {
   position: relative; display: flex; flex-direction: column; gap: 0.3rem;
-  border: 1px solid var(--rule); border-radius: 12px; padding: 1.2rem 1.2rem 1.1rem;
+  border: 1px solid var(--rule); border-radius: 12px; padding: 1rem 1rem 0.9rem;
   text-decoration: none; transition: border-color 0.25s ease, transform 0.25s ease;
 }
 .bento-card:hover { border-color: var(--gold); transform: translateY(-2px); }

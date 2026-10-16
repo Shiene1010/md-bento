@@ -78,21 +78,21 @@ current_roles:
 work_on_build:
   - title: "chunk-soundpad-mvp"
     tags: ["WEB-AUDIO", "SPEECH", "VANILLA"]
-    summary: "영어 청크 말하기 연습용 4탭 사운드패드 (듣기연습/형태/기록/내정보)"
-    metrics_or_detail: "Web Audio + Web Speech, 무빌드 단일 app.js"
+    summary: "영어 청크 말하기 4탭 사운드패드"
+    metrics_or_detail: "Web Audio + Web Speech · 무빌드"
     link_text: "Repo ↗"
     link_url: "https://github.com/Shiene1010/chunk-soundpad-mvp"
 
   - title: "tense-edge-kids"
     tags: ["CANVAS", "GAME", "KIDS-ENGLISH"]
-    summary: "5세 원어민 대상 영어 시제 Canvas 학습 게임 (기차·공장·로켓 어드벤처)"
-    metrics_or_detail: "60fps procedural 렌더 + Web Audio 신스"
+    summary: "5세 대상 영어 시제 Canvas 게임"
+    metrics_or_detail: "60fps 렌더 + Web Audio 신스"
     link_text: "Repo ↗"
     link_url: "https://github.com/Shiene1010/tense-edge-kids"
 
   - title: "vector-shredder"
     tags: ["CANVAS", "VECTOR", "PLAYGROUND"]
-    summary: "미니멀 벡터 그래픽 플레이그라운드 및 데모"
+    summary: "미니멀 벡터 그래픽 플레이그라운드"
     link_text: "Live Demo ↗"
     link_url: "https://shiene1010.github.io/vector-shredder"
 
@@ -103,7 +103,7 @@ work_off_build:
     link_url: "https://shiene1010.github.io/voyager/"
   - title: "프레딩 소몰톡"
     tags: ["ENGLISH", "SMALLTALK"]
-    summary: "당근모임 참가자로 스몰톡 영어 연습"
+    summary: "스몰톡 영어 연습"
     link_url: "https://shiene1010.github.io/voyager/"
   - title: "Voyager 블로그"
     tags: ["BLOG", "WRITING"]
