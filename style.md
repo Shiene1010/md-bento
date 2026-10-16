@@ -62,7 +62,6 @@ layout:
 | `bento-card` · `win-card` | 카드 베이스 + 윈도우형(도트·타이틀·구분선) |
 | `work-link` (pill) | 노란 둥근 버튼, 카드 하단 우측 고정 |
 | `window-bar` · `dot` · `window-rule` | 윈도우 크롬 |
-| `meet-more` | 섹션 하단 링크 우측 정렬 |
 | `graph` · `cluster` · `e-hub/e-leaf` · `n-hub/n-leaf/n-center` | 노드-엣지 그래프 + 스포트라이트 |
 | `band` | Origins band 배경 |
 | `quote` · `footer` · `foot-grid` | 인용·푸터 3열 |
@@ -174,7 +173,6 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .dot.muted { background: var(--muted); }
 .window-title { margin-left: 0.4rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); line-height: 1.5; min-height: 3em; }
 .window-rule { border: none; border-top: 1px solid var(--rule); margin: 0.2rem 0 0.6rem; width: 100%; }
-.meet-more { text-align: right; }
 .work-scroll {
   display: flex; gap: 1rem;
   overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.75rem;
