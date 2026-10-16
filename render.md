@@ -47,14 +47,7 @@
 > On the build, and off it.
 
 ### On the Build
-<div class="bento-grid work-scroll">{% for item in work_on_build %}
-<div class="bento-card work-card">
-<span class="bento-title">{{ item.title }}</span>
-<span class="work-tags">{% for tag in item.tags %}<code>{{ tag }}</code> {% endfor %}</span>
-<span class="bento-role">{{ item.summary }}</span>
-{% if item.metrics_or_detail %}<span class="work-detail">{{ item.metrics_or_detail }}</span>{% endif %}
-<a class="work-link" href="{{ item.link_url }}">{{ item.link_text | default('View Project') }}</a>
-</div>{% endfor %}
+<div class="bento-grid work-scroll">
 <div class="bento-card work-art" aria-hidden="true">
 <svg viewBox="0 0 320 220">
 <rect x="8" y="8" width="304" height="204" rx="12" fill="none" stroke="var(--rule)" stroke-width="1.5"/>
@@ -72,16 +65,18 @@
 </svg>
 <a class="work-link" href="https://github.com/Shiene1010">All Repos ↗</a>
 </div>
-</div>
-
-### Off the Build
-<div class="bento-grid work-scroll">{% for item in work_off_build %}
+{% for item in work_on_build %}
 <div class="bento-card work-card">
 <span class="bento-title">{{ item.title }}</span>
 <span class="work-tags">{% for tag in item.tags %}<code>{{ tag }}</code> {% endfor %}</span>
 <span class="bento-role">{{ item.summary }}</span>
-<a class="work-link" href="{{ item.link_url }}">Link ↗</a>
+{% if item.metrics_or_detail %}<span class="work-detail">{{ item.metrics_or_detail }}</span>{% endif %}
+<a class="work-link" href="{{ item.link_url }}">{{ item.link_text | default('View Project') }}</a>
 </div>{% endfor %}
+</div>
+
+### Off the Build
+<div class="bento-grid work-scroll">
 <div class="bento-card work-art" aria-hidden="true">
 <svg viewBox="0 0 240 220">
 <path d="M40,200 L40,100 A80,80 0 0 1 200,100 L200,200 Z" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0.8"/>
@@ -91,6 +86,13 @@
 </svg>
 <a class="work-link" href="https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/">아이읽영 ↗</a>
 </div>
+{% for item in work_off_build %}
+<div class="bento-card work-card">
+<span class="bento-title">{{ item.title }}</span>
+<span class="work-tags">{% for tag in item.tags %}<code>{{ tag }}</code> {% endfor %}</span>
+<span class="bento-role">{{ item.summary }}</span>
+<a class="work-link" href="{{ item.link_url }}">Link ↗</a>
+</div>{% endfor %}
 </div>
 
 </div>

@@ -91,9 +91,9 @@ work_on_build:
     link_url: "https://shiene1010.github.io/vector-shredder"
 
 work_off_build:
-  - title: "아이들 영어원서 읽어주기"
+  - title: "당근모임 운영자"
     tags: ["KIDS-ENGLISH", "ORGANIZER"]
-    summary: "당근모임 운영자로 아이들에게 영어원서 읽어주기"
+    summary: "아이들영어원서 읽어주기"
     link_url: "https://shiene1010.github.io/voyager/"
   - title: "프레딩 소몰톡"
     tags: ["ENGLISH", "SMALLTALK"]
