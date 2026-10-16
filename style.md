@@ -70,6 +70,7 @@ layout:
 ## 5. 모션
 
 - `reveal` (IO 0.15, .8s 상승), 카드 호버 (gold 테두리 + 2px 상승, .25s), 그래프 클러스터 스포트라이트 (`:has`)
+- 히어로 토큰 플로우 (3s 동기): 방울 4개(gold·moss·parchment, 중간까지 이동) + 막대 3색 펄스 + 곡선 엇갈림
 
 ## 6. 동기화 규칙
 
@@ -135,17 +136,15 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .tok-flow { animation: tokflow 1.2s linear infinite; }
 @keyframes tokflow { to { stroke-dashoffset: -16; } }
 .tok { transform-box: fill-box; transform-origin: center; offset-path: path('M110,250 C250,240 350,210 480,185'); animation: toktravel 3s linear infinite; }
-.t1 { animation-delay: 0s; }
-.t2 { animation-delay: 0.75s; }
-.t3 { animation-delay: 1.5s; }
-.t4 { animation-delay: 2.25s; }
-@keyframes toktravel { 0% { offset-distance: 0%; scale: 0.6; opacity: 0.2; } 15% { opacity: 1; scale: 1.4; } 75% { opacity: 1; } 100% { offset-distance: 100%; scale: 0.7; opacity: 0.2; } }
+.t1 { animation-delay: 0s; fill: var(--gold); }
+.t2 { animation-delay: 0.75s; fill: var(--moss-light); }
+.t3 { animation-delay: 1.5s; fill: var(--parchment-dim); }
+.t4 { animation-delay: 2.25s; fill: var(--gold); }
+@keyframes toktravel { 0% { offset-distance: 0%; scale: 0.6; opacity: 0.2; } 15% { opacity: 1; scale: 1.4; } 45% { opacity: 1; } 55% { offset-distance: 52%; scale: 0.7; opacity: 0.2; } 100% { offset-distance: 52%; scale: 0.7; opacity: 0; } }
 .bars rect { transform-box: fill-box; transform-origin: bottom; animation: barpulse 3s ease-in-out infinite; }
 .bars rect:nth-child(1) { animation-delay: 0s; }
-.bars rect:nth-child(2) { animation-delay: 0.6s; }
-.bars rect:nth-child(3) { animation-delay: 1.2s; }
-.bars rect:nth-child(4) { animation-delay: 1.8s; }
-.bars rect:nth-child(5) { animation-delay: 2.4s; }
+.bars rect:nth-child(2) { animation-delay: 1s; }
+.bars rect:nth-child(3) { animation-delay: 2s; }
 @keyframes barpulse { 0%, 100% { transform: scaleY(0.4); } 30% { transform: scaleY(1.15); } 60% { transform: scaleY(0.6); } }
 .curve-gold { animation: curvex 3s ease-in-out infinite; }
 .curve-moss { animation: curvex 3s ease-in-out -1.5s infinite; }
