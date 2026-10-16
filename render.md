@@ -29,6 +29,7 @@
 # {{ hero.title }}
 
 <p class="tagline">{{ hero.tagline }}</p>
+<p class="typed"><span>{{ hero.typed }}</span></p>
 <p class="badge-bar"><small><code>{{ profile.role_title }}</code> · {{ profile.status_badge }}</small></p>
 
 {% for item in current_roles %}

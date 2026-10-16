@@ -114,6 +114,11 @@ h2 {
 }
 h3 { font-size: 1.05rem; color: var(--parchment-dim); }
 .tagline { font-size: 1.25rem; color: var(--parchment-dim); max-width: 34em; }
+.typed { font-family: 'IBM Plex Mono', monospace; font-size: clamp(1rem, 2.4vw, 1.4rem); color: var(--gold); margin: 0 0 1rem; }
+.typed span { display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; max-width: 0; border-right: 2px solid var(--gold); animation: typing 3.2s steps(40) 0.6s forwards, caret 1s step-end infinite; }
+@keyframes typing { to { max-width: 100%; } }
+@keyframes caret { 50% { border-color: transparent; } }
+@media (prefers-reduced-motion: reduce) { .typed span { animation: none; max-width: none; border: none; } }
 .badge-bar { color: var(--muted); }
 a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .nav {

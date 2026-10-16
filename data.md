@@ -16,6 +16,7 @@ hero:
   eyebrow: "Service Dev · Suwon, South Korea"
   title: "Shiene1010"
   tagline: "OpenCode로 서비스를 개발하고, 당근모임에서 아이들 영어원서로 읽어줍니다."
+  typed: "I talk, Agents token — in Markdown."
 
 ticker:
   - "OpenCode"
