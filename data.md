@@ -97,10 +97,10 @@ work_on_build:
     link_url: "https://shiene1010.github.io/vector-shredder"
 
 work_off_build:
-  - title: "당근모임 운영자"
+  - title: "아영읽"
     tags: ["KIDS-ENGLISH", "ORGANIZER"]
     summary: "아이들영어원서 읽어주기"
-    link_url: "https://shiene1010.github.io/voyager/"
+    link_url: "https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/"
   - title: "프레딩 소몰톡"
     tags: ["ENGLISH", "SMALLTALK"]
     summary: "스몰톡 영어 연습"
