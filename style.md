@@ -134,21 +134,22 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .hero > *:not(.hero-bg) { position: relative; }
 .tok-flow { animation: tokflow 1.2s linear infinite; }
 @keyframes tokflow { to { stroke-dashoffset: -16; } }
-.tok { transform-box: fill-box; transform-origin: center; animation: tokpulse 1.6s ease-in-out infinite; }
-.t2 { animation-delay: 0.3s; }
-.t3 { animation-delay: 0.6s; }
-.t4 { animation-delay: 0.9s; }
-@keyframes tokpulse { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
-.bars rect { transform-box: fill-box; transform-origin: bottom; animation: barbreathe 2.8s ease-in-out infinite alternate; }
-.bars rect:nth-child(1) { animation-duration: 2.2s; }
-.bars rect:nth-child(2) { animation-duration: 2.6s; }
-.bars rect:nth-child(3) { animation-duration: 3.1s; }
-.bars rect:nth-child(4) { animation-duration: 2.4s; }
-.bars rect:nth-child(5) { animation-duration: 3.4s; }
-@keyframes barbreathe { from { transform: scaleY(0.7); } to { transform: scaleY(1); } }
-.curve-gold { animation: curvex 4s ease-in-out infinite alternate; }
-.curve-moss { animation: curvex 4s ease-in-out -2s infinite alternate; }
-@keyframes curvex { from { opacity: 0.35; } to { opacity: 0.55; } }
+.tok { transform-box: fill-box; transform-origin: center; offset-path: path('M110,250 C250,240 350,210 480,185'); animation: toktravel 3s linear infinite; }
+.t1 { animation-delay: 0s; }
+.t2 { animation-delay: 0.75s; }
+.t3 { animation-delay: 1.5s; }
+.t4 { animation-delay: 2.25s; }
+@keyframes toktravel { 0% { offset-distance: 0%; scale: 0.6; opacity: 0.2; } 15% { opacity: 1; scale: 1.4; } 75% { opacity: 1; } 100% { offset-distance: 100%; scale: 0.7; opacity: 0.2; } }
+.bars rect { transform-box: fill-box; transform-origin: bottom; animation: barpulse 3s ease-in-out infinite; }
+.bars rect:nth-child(1) { animation-delay: 0s; }
+.bars rect:nth-child(2) { animation-delay: 0.6s; }
+.bars rect:nth-child(3) { animation-delay: 1.2s; }
+.bars rect:nth-child(4) { animation-delay: 1.8s; }
+.bars rect:nth-child(5) { animation-delay: 2.4s; }
+@keyframes barpulse { 0%, 100% { transform: scaleY(0.4); } 30% { transform: scaleY(1.15); } 60% { transform: scaleY(0.6); } }
+.curve-gold { animation: curvex 3s ease-in-out infinite; }
+.curve-moss { animation: curvex 3s ease-in-out -1.5s infinite; }
+@keyframes curvex { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.6; } }
 .i-ring { transform-box: fill-box; transform-origin: center; animation: ring 2s ease-out infinite; }
 @keyframes ring { from { transform: scale(1); opacity: 0.8; } to { transform: scale(1.8); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .tok-flow, .tok, .bars rect, .curve-gold, .curve-moss, .i-ring { animation: none; } }
