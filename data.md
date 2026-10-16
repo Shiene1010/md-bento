@@ -17,7 +17,7 @@ profile:
 hero:
   eyebrow: "Service Dev · Suwon, South Korea"
   title: "Shiene1010"
-  tagline: "OpenCode로 서비스를 개발하고, 당근모임에서 아이들에게 영어원서를 읽어줍니다."
+  tagline: "OpenCode로 서비스를 개발하고, 당근모임에서 아이들 영어원서로 읽어줍니다."
 
 ticker:
   - "OpenCode"
@@ -110,10 +110,10 @@ work_off_build:
 
 # 02 — About Me
 origins:
-  quote: "OpenCode로 서비스를 만들고, 아이들에게 영어원서를 읽어주는 Shiene1010입니다."
+  quote: "OpenCode로 서비스를 만들고, 아이들 영어원서로 읽어주는 Shiene1010입니다."
   paragraphs:
     - "**OpenCode Muse Spark 1.3**으로 서비스를 직접 만들고 배포합니다."
-    - "**당근모임 운영자**: 아이들에게 영어원서를 읽어줍니다."
+    - "**당근모임 운영자**: 아이들 영어원서로 읽어줍니다."
     - "**프레딩 소몰톡 참가자**: 당근모임에서 스몰톡으로 영어를 씁니다."
     - "**youngest.dev 리버스 엔지니어링** 결과를 md-bento 제로빌드 구조에 이식 (현재!)"
 

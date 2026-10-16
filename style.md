@@ -145,6 +145,16 @@ summary { cursor: pointer; }
 .n-label { font-size: 12.5px; fill: var(--parchment); }
 .n-center-label { font-size: 13px; font-weight: 600; fill: var(--parchment); text-anchor: middle; }
 .graph a:hover .n-leaf { fill: var(--gold); }
+.graph a { cursor: pointer; }
+.cluster { transition: opacity 0.25s ease; }
+.graph:has(.cluster:hover) .cluster:not(:hover) { opacity: 0.3; }
+.cluster:hover .e-leaf { stroke: var(--gold); opacity: 0.9; }
+.cluster:hover .e-hub { opacity: 1; }
+.cluster:hover .n-leaf { fill: var(--gold); }
+.e-leaf, .e-hub { transition: stroke-width 0.2s ease, opacity 0.25s ease; }
+.e-leaf:hover, .e-hub:hover { stroke-width: 3; }
+.n-leaf { transform-box: fill-box; transform-origin: center; transition: transform 0.2s ease, fill 0.25s ease; }
+a:hover .n-leaf { transform: scale(1.6); }
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 @media (max-width: 640px) {

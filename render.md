@@ -122,10 +122,12 @@
 ## 03 — Where the Work Lives
 
 <svg class="graph" viewBox="0 0 680 450" role="img" aria-label="link graph">
-{% for g in link_groups %}<line x1="340" y1="228" x2="{{ g.hx }}" y2="{{ g.hy }}" class="e-hub"/>{% for row in g.links %}<line x1="{{ g.hx }}" y1="{{ g.hy }}" x2="{{ row.x }}" y2="{{ row.y }}" class="e-leaf"/>{% endfor %}{% endfor %}
-{% for g in link_groups %}<circle cx="{{ g.hx }}" cy="{{ g.hy }}" r="5" class="n-hub"/><text x="{{ g.hx }}" y="{{ g.hy }}" dy="-14" class="n-hub-label">{{ g.name }}</text>{% endfor %}
 <a href="#top"><circle cx="340" cy="228" r="8" class="n-center"/><text x="340" y="228" dy="26" class="n-center-label">Shiene1010</text></a>
-{% for g in link_groups %}{% if g.left %}{% for row in g.links %}<a href="{{ row.target_url }}"><title>{{ row.target }} — {{ row.role_desc }} · {{ row.nature }}</title><circle cx="{{ row.x }}" cy="{{ row.y }}" r="4" class="n-leaf"/><text x="{{ row.x }}" y="{{ row.y }}" dx="-10" dy="4" text-anchor="end" class="n-label">{{ row.target }}</text></a>{% endfor %}{% endif %}{% if g.right %}{% for row in g.links %}<a href="{{ row.target_url }}"><title>{{ row.target }} — {{ row.role_desc }} · {{ row.nature }}</title><circle cx="{{ row.x }}" cy="{{ row.y }}" r="4" class="n-leaf"/><text x="{{ row.x }}" y="{{ row.y }}" dx="10" dy="4" text-anchor="start" class="n-label">{{ row.target }}</text></a>{% endfor %}{% endif %}{% endfor %}
+{% for g in link_groups %}<g class="cluster">
+<line x1="340" y1="228" x2="{{ g.hx }}" y2="{{ g.hy }}" class="e-hub"/>{% for row in g.links %}<line x1="{{ g.hx }}" y1="{{ g.hy }}" x2="{{ row.x }}" y2="{{ row.y }}" class="e-leaf"/>{% endfor %}
+<circle cx="{{ g.hx }}" cy="{{ g.hy }}" r="5" class="n-hub"/><text x="{{ g.hx }}" y="{{ g.hy }}" dy="-14" class="n-hub-label">{{ g.name }}</text>
+{% if g.left %}{% for row in g.links %}<a href="{{ row.target_url }}"><title>{{ row.target }} — {{ row.role_desc }} · {{ row.nature }}</title><circle cx="{{ row.x }}" cy="{{ row.y }}" r="4" class="n-leaf"/><text x="{{ row.x }}" y="{{ row.y }}" dx="-10" dy="4" text-anchor="end" class="n-label">{{ row.target }}</text></a>{% endfor %}{% endif %}{% if g.right %}{% for row in g.links %}<a href="{{ row.target_url }}"><title>{{ row.target }} — {{ row.role_desc }} · {{ row.nature }}</title><circle cx="{{ row.x }}" cy="{{ row.y }}" r="4" class="n-leaf"/><text x="{{ row.x }}" y="{{ row.y }}" dx="10" dy="4" text-anchor="start" class="n-label">{{ row.target }}</text></a>{% endfor %}{% endif %}
+</g>{% endfor %}
 </svg>
 
 </div>
