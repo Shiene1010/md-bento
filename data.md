@@ -100,6 +100,7 @@ work_off_build:
   - title: "아영읽"
     tags: ["KIDS-ENGLISH", "ORGANIZER"]
     summary: "아이들영어원서 읽어주기"
+    link_text: "아영읽 ↗"
     link_url: "https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/"
   - title: "프레딩 소몰톡"
     tags: ["ENGLISH", "SMALLTALK"]
