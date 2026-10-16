@@ -36,6 +36,8 @@ nav:
     href: "#news"
   - label: "Publications"
     href: "#publications"
+  - label: "Network"
+    href: "#partners"
   - label: "Contact"
     href: "#contact"
 
@@ -262,6 +264,6 @@ link_groups:
         y: 415
 
 closing_quote:
-  quote: "쓴 글이 곧 페이지가 된다 — data.md + style.md, zero-build."
+  quote: "I write, Agents build — in Markdown."
   source: "md-bento · OpenCode Muse Spark 1.3"
 ---

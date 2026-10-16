@@ -119,7 +119,7 @@
 
 <div id="partners" class="wrap">
 
-## 03 — Where the Work Lives
+## 03 — Where the Network Works
 
 <svg class="graph" viewBox="0 0 680 450" role="img" aria-label="link graph">
 <a href="#top"><circle cx="340" cy="228" r="8" class="n-center"/><text x="340" y="228" dy="26" class="n-center-label">Shiene1010</text></a>
