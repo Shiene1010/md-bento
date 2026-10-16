@@ -28,16 +28,16 @@ ticker:
   - "GitHub Pages"
 
 nav:
-  - label: "About"
-    href: "#origins"
-  - label: "Projects"
+  - label: "Work"
     href: "#build"
+  - label: "Origins"
+    href: "#origins"
+  - label: "Network"
+    href: "#partners"
   - label: "News"
     href: "#news"
   - label: "Publications"
     href: "#publications"
-  - label: "Network"
-    href: "#partners"
   - label: "Contact"
     href: "#contact"
 
@@ -118,33 +118,6 @@ origins:
     - "**당근모임 운영자**: 아이들 영어원서로 읽어줍니다."
     - "**프레딩 소몰톡 참가자**: 당근모임에서 스몰톡으로 영어를 씁니다."
     - "**youngest.dev 리버스 엔지니어링** 결과를 md-bento 제로빌드 구조에 이식 (현재!)"
-
-# News (GitHub 최근 활동 3건)
-news:
-  - date: "2026.10"
-    text: "md-bento 포트폴리오 공개 (제로빌드 md-only, Pages 배포)"
-  - date: "2026.10"
-    text: "TRIP-HomeOS-MD 정리 (16개 문서 → 실행 엔진 분리)"
-  - date: "2026.10"
-    text: "global-grid-2062 배포 (Tweego SugarCube2 CYOA 데모)"
-
-# Publications (최근 GitHub Pages 3건)
-publications:
-  - title: "md-bento"
-    author: "Shiene1010"
-    image: ""
-    link_url: "https://github.com/Shiene1010/md-bento"
-    demo_url: "https://shiene1010.github.io/md-bento/"
-  - title: "TRIP-HomeOS-MD"
-    author: "Shiene1010"
-    image: ""
-    link_url: "https://github.com/Shiene1010/TRIP-HomeOS-MD"
-    demo_url: "https://shiene1010.github.io/TRIP-HomeOS-MD/"
-  - title: "global-grid-2062"
-    author: "Shiene1010"
-    image: ""
-    link_url: "https://github.com/Shiene1010/global-grid-2062"
-    demo_url: "https://shiene1010.github.io/global-grid-2062/"
 
 # 03 — 링크 그래프 (그룹별 허브 + 노드, 좌표 포함)
 link_groups:
@@ -262,6 +235,33 @@ link_groups:
         nature: "Gaming"
         x: 565
         y: 415
+# News (GitHub 최근 활동 3건)
+news:
+  - date: "2026.10"
+    text: "md-bento 포트폴리오 공개 (제로빌드 md-only, Pages 배포)"
+  - date: "2026.10"
+    text: "TRIP-HomeOS-MD 정리 (16개 문서 → 실행 엔진 분리)"
+  - date: "2026.10"
+    text: "global-grid-2062 배포 (Tweego SugarCube2 CYOA 데모)"
+
+# Publications (최근 GitHub Pages 3건)
+publications:
+  - title: "md-bento"
+    author: "Shiene1010"
+    image: ""
+    link_url: "https://github.com/Shiene1010/md-bento"
+    demo_url: "https://shiene1010.github.io/md-bento/"
+  - title: "TRIP-HomeOS-MD"
+    author: "Shiene1010"
+    image: ""
+    link_url: "https://github.com/Shiene1010/TRIP-HomeOS-MD"
+    demo_url: "https://shiene1010.github.io/TRIP-HomeOS-MD/"
+  - title: "global-grid-2062"
+    author: "Shiene1010"
+    image: ""
+    link_url: "https://github.com/Shiene1010/global-grid-2062"
+    demo_url: "https://shiene1010.github.io/global-grid-2062/"
+
 
 closing_quote:
   quote: "I write, Agents build — in Markdown."

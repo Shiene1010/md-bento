@@ -41,7 +41,7 @@
 </div>
 </div>
 
-<div class="wrap">
+<div id="build" class="wrap">
 
 ## 01 — The Work
 > On the build, and off it.
@@ -134,7 +134,7 @@
 
 <div id="news" class="wrap">
 
-## News
+## 04 — News
 
 {% for n in news %}
 * **{{ n.date }}** — {{ n.text }}
@@ -144,7 +144,7 @@
 
 <div id="publications" class="wrap">
 
-## Publications
+## 05 — Publications
 
 {% for pub in publications %}
 * **{{ pub.title }}** — {{ pub.author }}
