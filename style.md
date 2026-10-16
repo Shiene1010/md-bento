@@ -103,7 +103,7 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
   display: flex; gap: 1rem;
   overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.75rem;
 }
-.work-scroll .bento-card { flex: 0 0 300px; scroll-snap-align: start; min-height: 300px; }
+.work-scroll .bento-card { flex: 0 0 300px; min-width: 0; scroll-snap-align: start; min-height: 300px; }
 .ticker { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); overflow: hidden; white-space: nowrap; }
 .ticker-track { display: inline-block; padding: 14px 0; animation: scroll-left 32s linear infinite; }
 .ticker-track span { margin-right: 0.8em; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; }
@@ -128,7 +128,7 @@ summary { cursor: pointer; }
   text-decoration: none; transition: border-color 0.25s ease, transform 0.25s ease;
 }
 .bento-card:hover { border-color: var(--gold); transform: translateY(-2px); }
-.bento-title { font-family: 'Montserrat', 'Pretendard Variable', 'Pretendard', sans-serif; font-weight: 700; font-size: 1.1rem; }
+.bento-title { font-family: 'Montserrat', 'Pretendard Variable', 'Pretendard', sans-serif; font-weight: 700; font-size: 1.1rem; overflow-wrap: break-word; min-width: 0; }
 .bento-role { color: var(--muted); font-size: 0.88rem; }
 .bento-arrow { position: absolute; top: 1rem; right: 1.1rem; color: var(--gold); }
 .graph { width: 100%; height: auto; display: block; margin: 1.5rem 0; }
