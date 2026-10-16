@@ -101,7 +101,7 @@
 </div>{% endfor %}
 </div>
 
-<p><a class="work-link" href="https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/">아영읽 ↗</a></p>
+<p class="meet-more"><a class="work-link" href="https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/">아영읽 ↗</a></p>
 
 </div>
 

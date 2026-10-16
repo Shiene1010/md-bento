@@ -159,7 +159,7 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .hero img[alt="avatar"] { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 1px solid var(--rule); }
 .work-card { gap: 0.5rem; }
 .work-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
-.work-detail { color: var(--parchment-dim); font-size: 0.88rem; }
+.work-detail { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; }
 .work-link {
   margin-top: auto; align-self: flex-end;
   display: inline-block; border: 1.5px solid var(--gold); color: var(--gold);
@@ -172,14 +172,17 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .dot.gold { background: var(--gold); }
 .dot.moss { background: var(--moss-light); }
 .dot.muted { background: var(--muted); }
-.window-title { margin-left: 0.4rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.window-title { margin-left: 0.4rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); line-height: 1.5; min-height: 3em; }
 .window-rule { border: none; border-top: 1px solid var(--rule); margin: 0.2rem 0 0.6rem; width: 100%; }
 .meet-section { position: relative; padding: 1.5rem 0 0.5rem; }
-.meet-section-bg { position: absolute; top: 0; right: 0; height: 100%; opacity: 0.18; pointer-events: none; }
+.meet-section-bg { position: absolute; top: 0; right: 0; width: 42%; height: 100%; opacity: 0.18; pointer-events: none; }
+.meet-more { text-align: right; }
 .meet-section > *:not(.meet-section-bg) { position: relative; }
 .work-scroll {
   display: flex; gap: 1rem;
   overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.75rem;
+  -webkit-mask-image: linear-gradient(90deg, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, #000 92%, transparent);
 }
 .work-scroll .bento-card { flex: 0 0 260px; min-width: 0; scroll-snap-align: start; min-height: 260px; }
 .ticker { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); overflow: hidden; white-space: nowrap; }
