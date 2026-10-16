@@ -63,24 +63,25 @@ current_roles:
 
 # 01 — Projects
 work_on_build:
-  - title: "minimal-light 개인화"
-    tags: ["JEKYLL", "GITHUB-PAGES", "THEME"]
-    summary: "minimal-light Jekyll 테마를 Shiene1010 테마로 커스터마이징 (지금 보고 있는 페이지)"
-    metrics_or_detail: "현재 작업중"
+  - title: "chunk-soundpad-mvp"
+    tags: ["WEB-AUDIO", "SPEECH", "VANILLA"]
+    summary: "영어 청크 말하기 연습용 4탭 사운드패드 (듣기연습/형태/기록/내정보)"
+    metrics_or_detail: "Web Audio + Web Speech, 무빌드 단일 app.js"
+    link_text: "Repo ↗"
+    link_url: "https://github.com/Shiene1010/chunk-soundpad-mvp"
+
+  - title: "tense-edge-kids"
+    tags: ["CANVAS", "GAME", "KIDS-ENGLISH"]
+    summary: "5세 원어민 대상 영어 시제 Canvas 학습 게임 (기차·공장·로켓 어드벤처)"
+    metrics_or_detail: "60fps procedural 렌더 + Web Audio 신스"
+    link_text: "Repo ↗"
+    link_url: "https://github.com/Shiene1010/tense-edge-kids"
+
+  - title: "vector-shredder"
+    tags: ["CANVAS", "VECTOR", "PLAYGROUND"]
+    summary: "미니멀 벡터 그래픽 플레이그라운드 및 데모"
     link_text: "Live Demo ↗"
-    link_url: "https://shiene1010.github.io/minimal-light"
-
-  - title: "SwiftUI 샘플 앱"
-    tags: ["SWIFTUI", "IOS"]
-    summary: "iOS 학습용 샘플 앱"
-    metrics_or_detail: "개발중"
-    link_url: "https://shiene1010.github.io/minimal-light"
-
-  - title: "Antigravity 웹 배포"
-    tags: ["ANTIGRAVITY", "DEPLOY"]
-    summary: "english-pattern-blog 자동 배포 실험"
-    link_text: "English Pattern Blog ↗"
-    link_url: "https://shiene1010.github.io/english-pattern-blog/"
+    link_url: "https://shiene1010.github.io/vector-shredder"
 
 work_off_build:
   - title: "Voyager 블로그"
