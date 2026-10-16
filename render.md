@@ -121,13 +121,12 @@
 
 ## 03 — Where the Work Lives
 
-<div class="bento-grid">{% for row in work_matrix %}
-<a class="bento-card" href="{{ row.target_url }}">
-<span class="eyebrow">{{ row.category }}</span>
-<span class="bento-title">{{ row.target }}</span>
-<span class="bento-role">{{ row.role_desc }} · {{ row.nature }}</span>
-<span class="bento-arrow">↗</span>
-</a>{% endfor %}
+<div class="net">{% for g in link_groups %}
+<div class="net-group">
+<span class="net-hub"><span class="net-dot"></span><span class="eyebrow">{{ g.name }}</span></span>
+<div class="net-nodes">{% for row in g.links %}<a class="net-node" href="{{ row.target_url }}" title="{{ row.role_desc }} · {{ row.nature }}">{{ row.target }}</a>{% endfor %}
+</div>
+</div>{% endfor %}
 </div>
 
 </div>

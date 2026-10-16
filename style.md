@@ -135,6 +135,23 @@ summary { cursor: pointer; }
 .bento-title { font-family: 'Montserrat', 'Pretendard Variable', 'Pretendard', sans-serif; font-weight: 700; font-size: 1.1rem; }
 .bento-role { color: var(--muted); font-size: 0.88rem; }
 .bento-arrow { position: absolute; top: 1rem; right: 1.1rem; color: var(--gold); }
+.net { position: relative; margin: 1.5rem 0; padding-left: 28px; }
+.net::before {
+  content: ""; position: absolute; left: 10px; top: 14px; bottom: 14px; width: 2px;
+  background: linear-gradient(var(--gold), var(--moss-light), transparent);
+}
+.net-group { position: relative; padding: 0.7rem 0; }
+.net-hub { display: flex; align-items: center; gap: 0.6rem; }
+.net-dot {
+  position: absolute; left: -23px; width: 10px; height: 10px; border-radius: 50%;
+  background: var(--gold); box-shadow: 0 0 8px rgba(201, 162, 39, 0.6);
+}
+.net-nodes { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.55rem; }
+.net-node {
+  border: 1px solid var(--rule); border-radius: 999px; padding: 0.35rem 0.95rem;
+  font-size: 0.9rem; text-decoration: none; transition: border-color 0.25s ease;
+}
+.net-node:hover { border-color: var(--gold); }
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 @media (max-width: 640px) {
