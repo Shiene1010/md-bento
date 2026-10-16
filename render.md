@@ -61,7 +61,7 @@
 </div>
 </div>
 
-<div id="build" class="wrap">
+<div id="build" class="wrap view">
 
 ## 01 — The Work
 > On the build, and off it.
@@ -128,7 +128,7 @@
 </div>
 </div>
 
-<div id="partners" class="wrap">
+<div id="partners" class="wrap view">
 
 ## 03 — Where the Network Works
 
@@ -143,7 +143,7 @@
 
 </div>
 
-<div id="news" class="wrap">
+<div id="news" class="wrap view">
 
 ## 04 — News
 
@@ -153,7 +153,7 @@
 
 </div>
 
-<div id="publications" class="wrap">
+<div id="publications" class="wrap view">
 
 ## 05 — Publications
 

@@ -49,7 +49,7 @@ layout:
 
 ## 3. 레이아웃
 
-- `.wrap` 최대 1240px 중앙, 좌우 6vw. 섹션 여백 140px (모바일 88px). Hero 100svh 하단 정렬.
+- `.wrap` 최대 1240px 중앙, 좌우 6vw. 뷰 리듬 `.view` 88px(모바일 56px) — build·partners·news·publications 공통. 앵커 점프용 `scroll-margin-top: 90px`. Hero 100svh 하단 정렬.
 
 ## 4. 컴포넌트
 
@@ -98,6 +98,8 @@ body {
   margin: 0; overflow-x: hidden;
 }
 .wrap { max-width: 1240px; margin: 0 auto; padding: 0 6vw; }
+.view { padding: 88px 0; }
+[id] { scroll-margin-top: 90px; }
 .eyebrow {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px; letter-spacing: 0.22em;
@@ -226,6 +228,7 @@ a:hover .n-leaf { transform: scale(1.6); }
 .reveal.visible { opacity: 1; transform: none; }
 @media (max-width: 640px) {
   .band { padding: 88px 0; }
+  .view { padding: 56px 0; }
   .foot-grid { grid-template-columns: 1fr; }
   .work-scroll .bento-card { flex-basis: 220px; }
 }
