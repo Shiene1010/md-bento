@@ -12,9 +12,10 @@ tokens:
   rule: "rgba(243, 238, 227, 0.14)"
   muted: "#9A9E92"
 fonts:
-  serif: "Fraunces"
+  display: "Montserrat"
   sans: "Inter"
   mono: "IBM Plex Mono"
+  korean: "Pretendard Variable (CDN)"
 layout:
   max_width: "1240px"
   section_pad: "140px"
@@ -43,7 +44,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--ink);
   color: var(--parchment);
-  font-family: 'Inter', -apple-system, sans-serif;
+  font-family: 'Inter', 'Pretendard Variable', 'Pretendard', sans-serif;
   margin: 0; overflow-x: hidden;
 }
 .wrap { max-width: 1240px; margin: 0 auto; padding: 0 6vw; }
@@ -53,14 +54,14 @@ body {
   text-transform: uppercase; color: var(--gold);
 }
 h1 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Montserrat', 'Pretendard Variable', 'Pretendard', sans-serif;
   font-size: clamp(52px, 10vw, 148px);
-  line-height: 0.95; font-weight: 600; margin: 0.4em 0;
+  line-height: 0.95; font-weight: 700; margin: 0.4em 0; letter-spacing: -0.02em;
 }
 h2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Montserrat', 'Pretendard Variable', 'Pretendard', sans-serif;
   font-size: clamp(28px, 4vw, 44px);
-  font-weight: 450; margin: 0 0 1rem 0;
+  font-weight: 700; margin: 0 0 1rem 0; letter-spacing: -0.01em;
 }
 h3 { font-size: 1.05rem; color: var(--parchment-dim); }
 .tagline { font-size: 1.25rem; color: var(--parchment-dim); max-width: 34em; }
@@ -87,7 +88,7 @@ th, td { padding: 0.7rem 0.5rem; text-align: left; border-bottom: 1px solid var(
 details { border: 1px solid var(--rule); border-radius: 8px; padding: 0.9rem 1rem; margin: 1rem 0; }
 summary { cursor: pointer; }
 .quote { text-align: center; padding: 120px 0 40px 0; }
-.quote blockquote { border: none; font-size: clamp(24px, 4vw, 44px); font-family: 'Fraunces', serif; }
+.quote blockquote { border: none; font-size: clamp(24px, 4vw, 44px); font-family: 'Montserrat', 'Pretendard Variable', 'Pretendard', sans-serif; font-weight: 600; }
 .footer { padding: 88px 0 60px 0; border-top: 1px solid var(--rule); }
 .foot-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 2rem; }
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
@@ -101,5 +102,5 @@ summary { cursor: pointer; }
 ## 토큰 설명
 
 - `ink / ink-2`: 배경. `parchment`: 본문. `gold`: 포인트(eyebrow, 인용선, 티커 점).
-- `Fraunces`(제목 serif) + `Inter`(본문) + `IBM Plex Mono`(라벨). 폰트 교체 시 상단 `fonts:`와 `css`의 `font-family`를 함께 변경.
+- `Montserrat`(제목 display) + `Inter`(본문) + `IBM Plex Mono`(라벨) + `Pretendard Variable`(한글, CDN). 한글은 라틴 폰트에 없는 글리프라 자동 폴백된다.
 - 섹션 여백: 데스크탑 `140px`, 모바일 `88px`. `max-width: 1240px`.
