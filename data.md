@@ -81,20 +81,20 @@ work_on_build:
     summary: "영어 청크 말하기 4탭 사운드패드"
     metrics_or_detail: "Web Audio + Web Speech · 무빌드"
     link_text: "Repo ↗"
-    link_url: "https://github.com/Shiene1010/chunk-soundpad-mvp"
+    link_url: "https://shiene1010.github.io/chunk-soundpad-mvp/"
 
   - title: "tense-edge-kids"
     tags: ["CANVAS", "GAME", "KIDS-ENGLISH"]
     summary: "5세 대상 영어 시제 Canvas 게임"
     metrics_or_detail: "60fps 렌더 + Web Audio 신스"
     link_text: "Repo ↗"
-    link_url: "https://github.com/Shiene1010/tense-edge-kids"
+    link_url: "https://shiene1010.github.io/tense-edge-kids/"
 
-  - title: "vector-shredder"
-    tags: ["CANVAS", "VECTOR", "PLAYGROUND"]
-    summary: "미니멀 벡터 그래픽 플레이그라운드"
+  - title: "HedgeExpression"
+    tags: ["Pedagogical CCQ Engine", "Advanced Chunk Scaffolding", "Relationship-Based Scenarios"]
+    summary: "영어 표현 인지 및 청크 따라 말하기 익히기"
     link_text: "Live Demo ↗"
-    link_url: "https://shiene1010.github.io/vector-shredder"
+    link_url: "https://shiene1010.github.io/HedgeExpression/"
 
 work_off_build:
   - title: "아영읽"
