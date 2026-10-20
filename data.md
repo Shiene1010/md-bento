@@ -7,8 +7,8 @@
 profile:
   name: "Shiene1010"
   role_title: "Service Dev · OpenCode · Muse Spark 1.3"
-  hook: "OpenCode Muse Spark 1.3으로 서비스를 개발하는 비전공 홀로 런너"
-  status_badge: "🌱 Muse Spark로 서비스 개발중"
+  hook: "OpenCode Muse Spark 1.3으로 서비스를 만드는 비전공 홀로 런너"
+  status_badge: "🌱 Muse Spark free 써보기"
   copyright_year: "2026"
   avatar: "./assets/img/avatar.png"
 
@@ -46,8 +46,8 @@ contacts:
   email_apple1: "whatwillmyversebe@icloud.com"
   github: "https://github.com/Shiene1010"
   blogger: "https://shiene1010.blogspot.com/"
-  naver_blog: "https://blog.naver.com/whatiwillbeaverse"
-  voyager: "https://shiene1010.github.io/voyager/"
+  naver_blog: "https://blog.naver.com/testing-blog"
+  Shiene's AI 코딩 블로그: "https://shiene1010.github.io/voyager/"
   youtube: "https://www.youtube.com/@8Knockdowns"
   discord: "https://discord.gg/ef6YzwNA"
   steam: "https://steamcommunity.com/profiles/76561198355440490/"
@@ -56,8 +56,8 @@ contacts:
   instagram: "https://www.instagram.com/headtometa/"
   threads: "https://www.threads.com/@8knockdowns"
   x: "https://x.com/shienePark"
-  daangn_kids: "https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/"
-  daangn_freding: "https://daangn.com/kr/share/community/ref/invite-group/beyZP7qj2SA"
+  아영읽(아이들 영어원서 읽어주기): "https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/"
+  프렌딩 스몰톡: "https://daangn.com/kr/share/community/ref/invite-group/beyZP7qj2SA"
 
 # 히어로 하단 리스트용
 current_roles:
@@ -67,9 +67,9 @@ current_roles:
   - role: "아영읽 (아이들 영어원서 읽어주기)"
     org: "운영자 (당근모임)"
     org_url: "https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/"
-  - role: "프레딩 소몰톡"
+  - role: "프렌딩 스몰톡"
     org: "참가자 (당근모임)"
-    org_url: "https://blog.naver.com/whatiwillbeaverse"
+    org_url: "https://daangn.com/kr/share/community/ref/invite-group/beyZP7qj2SA"
   - role: "youngest.dev 리버스 엔지니어링"
     org: "md-bento에 이식"
     org_url: "https://youngest.dev/"
@@ -102,15 +102,15 @@ work_off_build:
     summary: "아이들 영어원서 읽어주기"
     link_text: "아영읽 ↗"
     link_url: "https://www.daangn.com/kr/group/아이들-영어원서-읽어주기-wto6ua7xpeez/"
-  - title: "프레딩 소몰톡"
+  - title: "프렌딩 스몰톡"
     tags: ["ENGLISH", "SMALLTALK"]
     summary: "스몰톡 영어 연습"
-    link_text: "Naver ↗"
+    link_text: "프렌딩 ↗"
     link_url: "https://daangn.com/kr/share/community/ref/invite-group/beyZP7qj2SA"
-  - title: "Voyager 블로그"
+  - title: "Shiene's AI 코딩 블로그"
     tags: ["BLOG", "WRITING"]
-    summary: "개인 블로그 및 기록"
-    link_text: "Blog ↗"
+    summary: "에이아이를 가지고 만들기"
+    link_text: "Shiene's AI"
     link_url: "https://shiene1010.github.io/voyager/"
 
 # 02 — About Me
@@ -119,7 +119,7 @@ origins:
   paragraphs:
     - "**OpenCode Muse Spark 1.3**으로 서비스를 직접 만들고 배포합니다."
     - "**당근모임 운영자**: 아이들 영어원서 읽어주기."
-    - "**프레딩 소몰톡 참가자**: 당근모임에서 스몰톡으로 영어말하기 모임 가입."
+    - "**프렌딩 스몰톡 참가자**: 당근모임에서 스몰톡으로 영어말하기 모임 가입."
     - "**youngest.dev 리버스 엔지니어링** 결과를 md-bento 제로빌드 구조에 이식 (현재!)"
 
 # 03 — 링크 그래프 (그룹별 허브 + 노드, 좌표 포함)
@@ -146,8 +146,8 @@ link_groups:
         nature: "당근모임"
         x: 115
         y: 180
-      - target: "프레딩 소몰톡"
-        target_url: "https://blog.naver.com/whatiwillbeaverse"
+      - target: "프렌딩 스몰톡"
+        target_url: "https://daangn.com/kr/share/community/ref/invite-group/beyZP7qj2SA"
         role_desc: "참가자"
         nature: "당근모임"
         x: 115
@@ -157,9 +157,9 @@ link_groups:
     hy: 360
     left: true
     links:
-      - target: "Voyager"
+      - target: "Github pages Bolg"
         target_url: "https://shiene1010.github.io/voyager/"
-        role_desc: "개인 블로그"
+        role_desc: "Shiene's AI 코딩 블로그"
         nature: "Writing"
         x: 115
         y: 320
@@ -170,7 +170,7 @@ link_groups:
         x: 115
         y: 365
       - target: "Naver Blog"
-        target_url: "https://blog.naver.com/whatiwillbeaverse"
+        target_url: "https://blog.naver.com/testing-blog"
         role_desc: "개인 블로그"
         nature: "Naver"
         x: 115
@@ -259,8 +259,8 @@ publications:
     demo_url: "https://shiene1010.blogspot.com/2026/08/m1-mac-mini-local-mobile-web-coding.html"
   - title: "Naver Blog 최신글"
     author: "Naver · 확인 필요"
-    link_url: "https://blog.naver.com/whatiwillbeaverse"
-    demo_url: "https://blog.naver.com/whatiwillbeaverse"
+    link_url: "https://blog.naver.com/testing-blog/224445869448"
+    demo_url: "https://blog.naver.com/testing-blog/224445869448"
 
 closing_quote:
   quote: "I talk, Agents token — in Markdown."
