@@ -177,11 +177,11 @@
 </div>
 <div>
 <p class="eyebrow">Elsewhere</p>
-<p><a href="{{ contacts.github }}">GitHub ↗</a> · <a href="{{ contacts.blogger }}">Blogger ↗</a> · <a href="{{ contacts.naver_blog }}">Naver ↗</a><br><a href="{{ contacts.voyager }}">Voyager ↗</a> · <a href="{{ contacts.youtube }}">YouTube ↗</a> · <a href="{{ contacts.discord }}">Discord ↗</a> · <a href="{{ contacts.steam }}">Steam ↗</a></p>
+<p><a href="{{ contacts.md-bento }}">Home ↗</a> · <a href="{{ contacts.blogger }}">Blogger ↗</a> · <a href="{{ contacts.naver_blog }}">Naver ↗</a><br><a href="{{ contacts.shiene_ai_blog }}">Shiene's AI blog ↗</a> · <a href="{{ contacts.youtube }}">YouTube@8kockdowns ↗</a>
 </div>
 <div>
 <p class="eyebrow">Colophon</p>
-<p><small>© {{ profile.copyright_year }} {{ profile.name }} · data.md + style.md → zero-build</small></p>
+<p><small>© {{ profile.copyright_year }} {{ profile.name }} · data.md + style.md + render.md → zero-build</small></p>
 </div>
 </div>
 </div>

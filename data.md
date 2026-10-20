@@ -7,7 +7,7 @@
 profile:
   name: "Shiene1010"
   role_title: "Service Dev · OpenCode · Muse Spark 1.3"
-  hook: "OpenCode Muse Spark 1.3으로 서비스를 만드는 비전공 홀로 런너"
+  hook: "OpenCode Muse Spark 1.3으로 비전공 홀로 무비용 서비스를 만드는 런너"
   status_badge: "🌱 Muse Spark free 써보기"
   copyright_year: "2026"
   avatar: "./assets/img/avatar.png"
@@ -15,16 +15,16 @@ profile:
 hero:
   eyebrow: "Service Dev · Suwon, South Korea"
   title: "Shiene1010"
-  tagline: "OpenCode로 서비스를 개발하고, 아이들 영어원서 읽어주기 모임을 운영합니다."
+  tagline: "OpenCode로 서비스를 만들고, 아이들 영어원서 읽어주기 모임을 운영합니다."
   typed: "I talk, Agents token — in Markdown."
 
 ticker:
   - "OpenCode"
   - "Muse Spark 1.3"
   - "Zero-Build"
-  - "Kids English"
-  - "Small Talk"
-  - "GitHub Pages"
+  - "아영읽"
+  - "마크다운"
+  - ""
 
 nav:
   - label: "Work"
@@ -45,9 +45,10 @@ contacts:
   email: "whatwillmyversebe@naver.com"
   email_apple1: "whatwillmyversebe@icloud.com"
   github: "https://github.com/Shiene1010"
+  md-bento: "https://shiene1010.github.io/md-bento/"
   blogger: "https://shiene1010.blogspot.com/"
   naver_blog: "https://blog.naver.com/testing-blog"
-  Shiene's AI 코딩 블로그: "https://shiene1010.github.io/voyager/"
+  shiene_ai_blog: "https://shiene1010.github.io/voyager/"
   youtube: "https://www.youtube.com/@8Knockdowns"
   discord: "https://discord.gg/ef6YzwNA"
   steam: "https://steamcommunity.com/profiles/76561198355440490/"
@@ -118,7 +119,7 @@ origins:
   quote: "OpenCode로 서비스를 만들고, 아이들 영어원서로 읽어주기 모임장 Shiene1010입니다."
   paragraphs:
     - "**OpenCode Muse Spark 1.3**으로 서비스를 직접 만들고 배포합니다."
-    - "**당근모임 운영자**: 아이들 영어원서 읽어주기."
+    - "**아영읽 당근모임 운영자**: 아이들 영어원서 읽어주기."
     - "**프렌딩 스몰톡 참가자**: 당근모임에서 스몰톡으로 영어말하기 모임 가입."
     - "**youngest.dev 리버스 엔지니어링** 결과를 md-bento 제로빌드 구조에 이식 (현재!)"
 
