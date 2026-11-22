@@ -250,10 +250,10 @@ news:
 
 # Publications (블로그 3종 최신글, 매주 1회 갱신)
 publications:
-  - title: "지킬테마 voyager 블로그 만들기"
-    author: "Voyager · 2026.10"
-    link_url: "https://shiene1010.github.io/voyager/antigravity/web/non-major-ai-dev/"
-    demo_url: "https://shiene1010.github.io/voyager/antigravity/web/non-major-ai-dev/"
+  - title: "GPS 없는 코엑스 지하 미로 탈출기: 자가 진화형 실내 길라잡이 AI 데모 구축"
+    author: "Voyager · 2026.11.15"
+    link_url: "https://shiene1010.github.io/voyager/antigravity/ai-dev/demo/coex-indoor-wayfinding-demo/"
+    demo_url: "https://shiene1010.github.io/voyager/antigravity/ai-dev/demo/coex-indoor-wayfinding-demo/"
   - title: "맥미니 M1 로컬 웹코더 에이전트 이슈 리포트"
     author: "Blogger · 2026.08"
     link_url: "https://shiene1010.blogspot.com/2026/08/m1-mac-mini-local-mobile-web-coding.html"
