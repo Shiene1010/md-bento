@@ -260,8 +260,8 @@ publications:
     demo_url: "https://shiene1010.blogspot.com/2026/08/m1-mac-mini-local-mobile-web-coding.html"
   - title: "Naver Blog 최신글"
     author: "Naver · 확인 필요"
-    link_url: "https://blog.naver.com/testing-blog/224445869448"
-    demo_url: "https://blog.naver.com/testing-blog/224445869448"
+    link_url: "https://blog.naver.com/testing-blog/224485882169"
+    demo_url: "https://blog.naver.com/testing-blog/224485882169"
 
 closing_quote:
   quote: "I talk, Agents token — in Markdown."
