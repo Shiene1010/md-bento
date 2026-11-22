@@ -3,3 +3,4 @@ youngest-dev.json
 .env
 .venv/
 __pycache__/
+.vscode/
