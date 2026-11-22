@@ -258,8 +258,8 @@ publications:
     author: "Blogger · 2026.08"
     link_url: "https://shiene1010.blogspot.com/2026/08/m1-mac-mini-local-mobile-web-coding.html"
     demo_url: "https://shiene1010.blogspot.com/2026/08/m1-mac-mini-local-mobile-web-coding.html"
-  - title: "Naver Blog 최신글"
-    author: "Naver · 확인 필요"
+  - title: "포항 애플 디벨로퍼 아카데미 SHOWCASE26 참가 후기 1편, 강남발 리무진과 사야(Saya) 멘토의 조언"
+    author: "Naver · 2026.11.21"
     link_url: "https://blog.naver.com/testing-blog/224485882169"
     demo_url: "https://blog.naver.com/testing-blog/224485882169"
 
